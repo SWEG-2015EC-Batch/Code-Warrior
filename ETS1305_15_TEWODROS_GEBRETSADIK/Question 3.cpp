@@ -12,7 +12,6 @@ cin >> letter;
     cout << "Uppercase: " << static_cast<char>(std::toupper(letter)) <<endl;
     cout << "Lowercase: " << static_cast<char>(tolower(letter)) <<endl;
     } else {
-    cout << "Invalid input! Please enter a letter." <<endl;
-    }   
+    cout << "Invalid input! Please enter a letter." <<endl;   
     return 0;
 }
