@@ -5,11 +5,11 @@ using namespace std;
 
 int main() {
     
-    const double PENSION_RATE = 0.05; 
-    const double TAX_RATE = 0.15;     
+    const float PENSION_RATE = 0.05; 
+    const float TAX_RATE = 0.15;     
     string employeeName;
-    double weeklyHours, bonusRate, baseSalary;
-
+    float bonusRate, baseSalary;
+    int weeklyHours;
     
     cout << "Enter employee name: ";
     getline(cin, employeeName);
@@ -35,4 +35,14 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
 
