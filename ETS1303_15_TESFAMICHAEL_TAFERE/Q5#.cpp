@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <iomanip>
 
@@ -33,16 +34,7 @@ int main() {
     cout << "Bonus Payment: " << fixed << setprecision(2) << bonusPayment << " birr" << endl;
     cout << "Net Salary: " << fixed << setprecision(2) << netSalary << " birr" << endl;
 
-    return 0;
-}
-
-
-
-
-
-
-
-
+return 0;
 
 
 
