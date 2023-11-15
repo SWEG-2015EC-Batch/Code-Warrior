@@ -1,1 +1,28 @@
+Problem Analysis:
 
+The problem is to create a C++ program that calculates how long it will take to send a file over a serial transmission line. The transmission line can transmit 960 characters per second. The key components of the problem include:
+
+Input:Prompt the user to input the size of the file in characters. Validation:
+
+Ensure that the entered value for the file size is a valid numerical value. Calculation:
+
+Calculate the time it will take to send the file using the formula: Time (seconds)=File Size (characters)
+
+Transmission Rate (characters per second) Time (seconds)= Transmission Rate (characters per second) File Size (characters)​
+
+Output:Display the calculated time in seconds. Algorithm Design:
+
+Input:Prompt the user to input the size of the file in characters. Validation:Ensure that the entered value for the file size is a valid numerical value.
+
+Calculation:Calculate the time it will take to send the file using the formula: Time (seconds)=File Size (characters) Transmission Rate (characters per second) Time (seconds)= Transmission Rate (characters per second) File Size (characters)​
+
+Output:Display the calculated time in seconds.
+
+pseudocode: 
+1. Display("Enter the size of the file in characters:")
+
+2. Input fileSize
+
+3. Validate fileSize is a valid numerical value
+
+4. Calculate timeInSeconds = fileSize / 960 5. Display("It will take approximately", timeInSeconds, "seconds to send the file.")
