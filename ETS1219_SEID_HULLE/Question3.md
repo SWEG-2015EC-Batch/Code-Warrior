@@ -16,4 +16,10 @@ Display the converted letter.
 
 pseudocode:
 
-Display("Enter a letter:")Input inputCharValidate inputChar is a valid letterIf isalpha(inputChar) is true: a. Convert inputChar to uppercase using toupper function b. Display("Uppercase equivalent:", convertedChar) c. Convert inputChar to lowercase using tolower function d. Display("Lowercase equivalent:", convertedChar) Else: Display("Please enter a valid letter.")
+1.Display("Enter a letter:")
+
+2.Input inputChar
+
+3.Validate inputChar is a valid letter
+
+4.If isalpha(inputChar) is true: a. Convert inputChar to uppercase using toupper function b. Display("Uppercase equivalent:", convertedChar) c. Convert inputChar to lowercase using tolower function d. Display("Lowercase equivalent:", convertedChar) Else: Display("Please enter a valid letter.")
