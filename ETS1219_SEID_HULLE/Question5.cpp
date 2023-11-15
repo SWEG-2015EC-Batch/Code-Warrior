@@ -35,3 +35,4 @@ int main() {
     cout << "Net Salary: " << fixed << setprecision(2) << netSalary << " birr" << endl;
 
 return 0;
+}
