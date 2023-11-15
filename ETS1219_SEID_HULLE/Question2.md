@@ -19,10 +19,17 @@ Display the calculated number of miles.
 pseudocode:
 
 1.Display("Enter the capacity in gallons of the automobile's fuel tank:")
+
 2.Input fuelTankCapacity
+
 3.Validate fuelTankCapacity is a valid numerical value
+
 4.Display("Enter the miles per gallon the automobile can travel:")
+
 5.Input milesPerGallon
+
 6.Validate milesPerGallon is a valid numerical value
+
 7.Calculate milesWithoutRefueling = fuelTankCapacity * milesPerGallon
+
 8.Display("The automobile can be driven for approximately", milesWithoutRefueling, "miles without refueling.")
