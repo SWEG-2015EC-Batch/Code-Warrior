@@ -1,3 +1,4 @@
+// calculation of  employer salary in c++
 #include <iostream>
 #include <string>
 using namespace std;
