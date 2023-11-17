@@ -9,3 +9,14 @@ step 2 = read weight, height
 step 3 = bmi = weight/(height*height)
 step 4 = diplay bmi
 step 5 = stop 
+
+flowchart
+        (start)
+           |
+  / read weight, height/
+           |
+|bmi = weight/(height*height)|
+           |
+     /print bmi/
+           |
+         (stop)
