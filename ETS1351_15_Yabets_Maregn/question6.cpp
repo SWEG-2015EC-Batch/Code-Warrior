@@ -10,7 +10,8 @@ int main(){
     cout<<"960 char = 960 byte so it takes 1 second to transfer 960 bytes. "<<endl;
     amt_transferring_data = 419430400;
     time_taken = amt_transferring_data/ amt_char;
-    cout<<"number of seconds to transfer "<<amt_transferring_data<<" bytes is "<<time_taken<<" seconds";
+    cout<<"number of seconds to transfer "<<amt_transferring_data<<" bytes is "<<time_taken<<" seconds"<<endl;
+    cout<<"in days it might take "<<time_taken/(60 * 60 * 24)<<" days";
     
     return 0;
 }
