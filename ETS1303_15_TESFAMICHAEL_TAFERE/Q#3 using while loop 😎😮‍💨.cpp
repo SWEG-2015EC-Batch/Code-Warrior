@@ -12,7 +12,7 @@ int main()
         
         cout<<"Enter a letter: ";
         cin>>letter;
-        
+       
         while(true)
        {
             cout<<"Choose 1 for uppercase or 2 for lowercase: ";
