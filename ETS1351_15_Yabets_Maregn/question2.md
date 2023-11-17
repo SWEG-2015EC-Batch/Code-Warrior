@@ -1,7 +1,7 @@
                                      analysis
-input the amount of fuel in gallon the automobile fuel tank has and the miles per gallons the automobile can be driven
-process number of miles = amount of fuel  *  mile per gallon
-output number of mile
+    input the amount of fuel in gallon the automobile fuel tank has and the miles per gallons the automobile can be driven
+      process number of miles = amount of fuel  *  mile per gallon
+        output number of mile
 
                             algorithm
      step 1 start
