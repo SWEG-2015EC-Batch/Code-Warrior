@@ -20,13 +20,15 @@ step 7 = stop
                        |
          |assign amount character = 960|
                        |
-   |assign amount of transferring  data = 419430400|
+    |assign amount of transferring  data = 419430400|
                        |
-|time taken to transfer  =  amount of transferring  data / amount character|
+    |time taken to transfer  =  amount of transferring  data / amount character|
                        |
-   |time_taken_indays =  time_taken / 60*60*24|
+     |time_taken_indays =  time_taken / 60*60*24|
                        |
       /display time_taken, time_taken indays/
                        |
                      (stop)
+
+                     
                        
