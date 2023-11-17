@@ -20,9 +20,9 @@ step 8 = stop
 
 
 
-flochart
-                                                 (start)
-                                                    |
+                                      flochart
+                                                     (start)
+                                                     |
                       /read weekly working hours, bonus rate per hour and base salary and employee name/
                                                      |
                        |assign weekly working hours as "wwh", bonus rate per hour as "brph"
