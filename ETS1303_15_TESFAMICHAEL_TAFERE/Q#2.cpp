@@ -1,4 +1,4 @@
-//fuel tank mile analizer 
+//Fuel tank mile analizer 
 #include <iostream>
 using namespace std;
 int main()
