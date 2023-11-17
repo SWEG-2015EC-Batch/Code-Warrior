@@ -16,6 +16,10 @@ step 6 = bonus payment = weekly working hours * bonus rate per hour
 step 7  = display  gross-salary, net salary and bonus payment.
 step 8 = stop
 
+
+
+
+
 flochart
                                                  (start)
                                                     |
