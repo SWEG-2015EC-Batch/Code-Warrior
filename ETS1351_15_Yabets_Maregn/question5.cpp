@@ -6,7 +6,8 @@ int main(){
     and base salary as "bs".
     gross-salary as "gs" net salary as "ns" and bonus payment as bp"
     */
-    double wwh, brph, bs, gs, ns, bp;
+    double  brph, bs, gs, ns, bp;
+    int wwh; 
     cout<<"enter name:- ";
     cin>>name;
     cout<<"enter weekly working hours:- ";
@@ -15,9 +16,9 @@ int main(){
     cin>>brph;
     cout<<"base salary :- ";
     cin>>bs;
-//gross salary = weekly work hour * base salery + weekly work hour * bonus rate per hour
+//gross salary = base salery + weekly work hour * bonus rate per hour
    
-    gs = (wwh*bs)+(wwh*brph);
+    gs = (bs)+(wwh*brph);
 // net salary = gross salary  - tax diduction + pension diduction
   ns = gs - (0.05*gs + 0.15*gs) ;
   // bonus payment = weekly working hour * bonus rate per hour
