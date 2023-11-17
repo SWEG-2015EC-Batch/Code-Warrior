@@ -1,32 +1,20 @@
 //A program that calculates x^y where x and y are provided by the user.
 #include <iostream>
-#include <cmath>
+#include <cmath> 
 using namespace std;
 
 int main() {
-    double x, y;
+    int x, y, ans;
 
-    cout << "Enter the value of X: ";
+    cout << "Enter the value of x: ";
     cin >> x;
-
-    cout << "Enter the value of Y: ";
+    cout << "Enter the value of y: ";
     cin >> y;
 
-    double result = pow(x, y);
+    ans = pow(x, y);
 
-    cout << "The result of the expression " << x << "^" << y << " is: " << result <<endl;
+    cout << "x^y = " << ans;
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
 
