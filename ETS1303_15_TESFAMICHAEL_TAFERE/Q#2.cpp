@@ -14,7 +14,7 @@ int main()
     
    miles_without_refuleing = fule_capacity * mile_per_gallon;
    
-   cout<<"The number of miles the automotive can be driven is "<< miles_without_refuleing<<" miles."
+   cout<<"The number of miles the automotive can be driven is "<< miles_without_refuleing<<" miles without refueling."
 ;
 return 0;
 }    
