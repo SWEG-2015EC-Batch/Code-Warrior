@@ -1,29 +1,33 @@
-// calculation of  employer salary in c++
+//A program that calcutedthe gross salary , net salary and bonus payment.
 #include <iostream>
-#include <string>
 using namespace std;
-int main() {
-    string employee_name;
-    int weekly_working_hours;
-    double bonus_rate_per_hour, base_salary, gross_salary, net_salary, bonus_payment, pension_amount, tax_amount;
-cout << "Enter employee name: ";
-cin >> employee_name;
-cout << "Enter weekly working hours: ";
-cin >> weekly_working_hours;
-cout << "Enter bonus rate per hour: ";
-cin >> bonus_rate_per_hour;
-cout << "Enter base salary: ";
-cin >> base_salary;
- gross_salary = (weekly_working_hours * bonus_rate_per_hour) + base_salary;
-    pension_amount = 0.05 * gross_salary;
-    tax_amount = 0.15 * gross_salary;
-    net_salary = gross_salary - (pension_amount + tax_amount);
-    bonus_payment = weekly_working_hours * bonus_rate_per_hour;
 
-    cout << "Employee Name: " << employee_name <<endl;
-    cout << "Gross Salary: " << gross_salary <<endl;
-    cout << "Net Salary: " << net_salary <<endl;
-    cout << "Bonus Payment: " << bonus_payment <<endl;
-
+int main()
+{
+    const float penshionRate = 0.05, taxRate = 0.15;
+    float weeklyWorkingHours, bonusRatePerHour, baseSalary, grossSalary, netSalary, bonusPayment, penshion, incomeTax;
+    string employeeName;
+    
+    cout <<"Enter your name: ";
+     cin>>employeeName;
+    cout <<"Enter your weekly working hours: ";
+     cin>>weeklyWorkingHours;
+    cout<<"bonus rate per hour:";
+     cin>>bonusRatePerHour;
+     cout<<"Enter your base salary: ";
+     cin>>baseSalary;
+    
+   bonusPayment = weeklyWorkingHours * bonusRatePerHour;
+    grossSalary = baseSalary + bonusPayment;
+    
+    penshion = grossSalary * penshionRate;
+    incomeTax = grossSalary * taxRate;
+    netSalary = (grossSalary - penshion -incomeTax);
+    
+    cout<<"Your bonus payment is "<<bonusPayment<<endl;
+    cout<<" Your gross salary is "<<grossSalary<<endl;
+    cout<<"Your net salary is "<<netSalary<<endl;
+    
     return 0;
 }
+   
