@@ -13,7 +13,7 @@ int main() {
 
     bmi = weight / (height * height);
 
-    cout << "Your Body Mass Index is: " << bmi << endl;
+    cout << "Your Body Mass Index is: " << bmi <<" Kg/m^2."<< endl;
 
     return 0;
 }
