@@ -3,7 +3,7 @@
 using namespace std;
 int main()
 {
-    const double transmmitionRate =960;
+    const float transmmitionRate =960;
     int fileSize;
     float time, hour;
     
