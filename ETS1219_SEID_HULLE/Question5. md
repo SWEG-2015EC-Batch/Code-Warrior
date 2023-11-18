@@ -1,3 +1,5 @@
+![image](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149233683/b0399c66-638f-4e79-838c-952b7f88531c)
+
 Problem Analysis:
 
 The problem is to develop a program that reads an employee's name, weekly working hours, bonus rate per hour, and base salary. The program needs to calculate and display the employee's gross salary, net salary, and bonus payment, considering a pension rate of 5% and a tax rate of 15%. The key components of the problem include:
