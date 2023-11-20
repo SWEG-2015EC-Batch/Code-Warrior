@@ -12,6 +12,11 @@ int main()
         
         cout<<"Enter a letter: ";
         cin>>letter;
+        
+        if (!isalpha(letter))
+        {
+            cout<<"That's not a letter, please enter a letter.\n";
+        }else{
        
         while(true)
        {
@@ -36,7 +41,7 @@ int main()
                 cout<<"The lowercase equivalent of "<<letter<<" is "<<Letter<<".";
             }break;
    }
-   
+    }
 return 0;
 }             
         
