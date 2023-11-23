@@ -14,9 +14,7 @@ int main(){
         BMI = (wight)/(hight*hight);
         cout << "The BMI of the person is: " <<BMI <<" Kg/m^2";
 
-
-
-
+#####
         //Prompt the user to input the capacity in gallons of the fuel tank
         float tankCapacity, milePerGallon, numMile;
         milePerGallon = 0.0;
@@ -29,9 +27,7 @@ int main(){
         numMile = milePerGallon * tankCapacity;
         cout <<"The number of mile of the automobile is: " <<numMile;
 
-
-
-
+#####
         char letter;
         // Prompt for input
         cout <<"Please enter the letter by using your keyboard ";
@@ -49,9 +45,7 @@ int main(){
             cout <<" Invalid input, Please enter the letter by using your keyboard ";
         }
 
-
-
-
+#####
         float x, y, result;
        
         cout <<"Enter the x value ";
@@ -61,9 +55,8 @@ int main(){
         result = pow(x, y);
         cout <<"The  result of the expression is: \n" <<x <<"^" <<y << " = " <<result;
 
-
-
-
+#####
+        const double penshionRate = 0.05, taxRate = 0.15;
         string employeeName;
         
         double weeklyHours, baseSalary;
@@ -79,28 +72,23 @@ int main(){
         cout << "Enter the base salary: \n";
         cin >> baseSalary;
 
-        //calculate over time hours and bonus payment
-        if (hrsWorked > 40){
-            cout <<"Enter worked hours: ";
-            cin >>hrsWorked;
-            overtimeHour = hrsWorked - 40;
-            bonusPayment = bonusRate * overtimeHour;
-        }
+        //calculate bonus payment
+        
+            bonusPayment = bonusRate * weeklyHours;
+        
         //calculate gross salary, net salary, tax rate, and pension
 
         double grossSalary = baseSalary + bonusPayment;
         double pension = 0.05 * grossSalary;
-        double taxRate = 0.15 * grossSalary;
-        double netSalary = grossSalary - (pension + taxRate);
+        double incomeTaxRate = 0.15 * grossSalary;
+        double netSalary = grossSalary - (pension + incomeTaxRate);
         
         //output results
         cout << "Gross Salary: " <<grossSalary <<endl;
         cout << "Bonus Payment: " <<bonusPayment <<endl;
         cout << "Net Salary: " <<netSalary;
 
-
-
-
+#####
         const int transmission_speed = 960;
         int file_size;
         cout << "please enterbthe size of the file to be sent in bytes: ";
