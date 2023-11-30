@@ -1,4 +1,5 @@
 //BMI calculator
+//By Tesfamichael 
 #include <iostream>
 using namespace std;
 
