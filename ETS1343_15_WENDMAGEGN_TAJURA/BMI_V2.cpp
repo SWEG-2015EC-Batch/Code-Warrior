@@ -9,9 +9,9 @@ int main(){
        //Take some data from the user to calculate BMI.
         cout<<"Please verify your gender \n";
         cin>>gender;
-        cout <<"Please enter the weight: ";
+        cout <<"Please enter the weight Kilogram: ";
         cin >>wight;
-        cout <<"Please enter the hight: ";
+        cout <<"Please enter the hight Meter: ";
         cin >>hight;
          
 
