@@ -1,5 +1,5 @@
-
 //A program that calcutedthe gross salary , net salary and bonus payment.
+//By Tesfamichael 
 #include <iostream>
 using namespace std;
 
