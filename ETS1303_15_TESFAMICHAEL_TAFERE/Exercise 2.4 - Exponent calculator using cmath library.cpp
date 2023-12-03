@@ -1,4 +1,5 @@
 //A program that calculates x^y where x and y are provided by the user.
+//By Tesfamichael 
 #include <iostream>
 #include <cmath> 
 using namespace std;
