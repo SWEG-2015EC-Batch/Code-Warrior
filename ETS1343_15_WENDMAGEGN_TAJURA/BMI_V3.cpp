@@ -18,7 +18,7 @@ int main(){
         cin>>gender;
         cout <<"Please enter the weight in Kilogram: ";
         cin >>wight;
-        cout <<"Please enter the hight in meter: ";
+        cout <<"Please enter the hight in Meter: ";
         cin >>hight;
         //BMI calculater function
         BMI = (wight)/(hight*hight);
