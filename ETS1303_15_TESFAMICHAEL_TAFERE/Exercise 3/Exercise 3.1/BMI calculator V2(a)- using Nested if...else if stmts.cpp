@@ -23,17 +23,17 @@ int main() {
     }else if(bmi<=20.5 && bmi>25){
        cout << "Your Body Mass Index is: " << bmi <<" Kg/m^2"<< ", you are male and normal weighted."; 
     }else if(bmi>=25 && bmi<30){ 
-    cout << "Your Body Mass Index is: " << bmi <<" Kg/m^2"<< ", you are male and over weight.";
+    cout << "Your Body Mass Index is: " << bmi <<" Kg/m^2"<< ", you are male and over weighted.";
     }else{cout << "Your Body Mass Index is " << bmi <<" Kg/m^2"<< ", you are male and obese.";
  }
  }else if(gender=='F'){
       if(bmi<18.5){
-     cout << "Your Body Mass Index is: " << bmi <<" Kg/m^2"<< ", you are male and under weighted.";
+     cout << "Your Body Mass Index is: " << bmi <<" Kg/m^2"<< ", you are female and under weighted.";
     }else if(bmi<=18.5 && bmi>24){
-       cout << "Your Body Mass Index is: " << bmi <<" Kg/m^2"<< ", you are male and normal weighted."; 
+       cout << "Your Body Mass Index is: " << bmi <<" Kg/m^2"<< ", you are female and normal weighted."; 
     }else if(bmi>=24 && bmi<30){ 
-    cout << "Your Body Mass Index is: " << bmi <<" Kg/m^2"<< ", you are male and over weight.";
-    }else{cout << "Your Body Mass Index is: " << bmi <<" Kg/m^2"<< ", you are male and obese.";
+    cout << "Your Body Mass Index is: " << bmi <<" Kg/m^2"<< ", you are female and over weighted.";
+    }else{cout << "Your Body Mass Index is: " << bmi <<" Kg/m^2"<< ", you are female and obese.";
     }
  }else{
     cout<<"Please enter M if you are male or F if you are female.";
