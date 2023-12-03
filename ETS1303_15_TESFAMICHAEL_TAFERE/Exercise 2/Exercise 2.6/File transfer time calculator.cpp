@@ -1,4 +1,5 @@
 //A programthat wil calculate how long it willtake to send a file.
+//By Tesfamichael 
 #include <iostream>
 using namespace std;
 int main()
