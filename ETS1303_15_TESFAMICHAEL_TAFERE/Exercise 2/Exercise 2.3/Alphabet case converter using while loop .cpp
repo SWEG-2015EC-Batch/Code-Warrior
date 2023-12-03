@@ -1,5 +1,5 @@
 // While loop demo on a program that convert any letter to its uppercase or lowercase.
-
+//By Tesfamichael 
 #include <iostream>
 #include <cctype>
 using namespace std;
