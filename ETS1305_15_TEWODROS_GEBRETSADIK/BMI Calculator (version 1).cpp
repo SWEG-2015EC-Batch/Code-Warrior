@@ -13,7 +13,7 @@ int main() {
     bmi = weight / (height * height);
 
     // Display the BMI
-    cout << "Your BMI is: " << bmi << endl;
+    cout << "Your BMI is: " << bmi << endl
 
     return 0;
 }
