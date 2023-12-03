@@ -1,4 +1,5 @@
 //Fuel tank mile analizer.
+//By Tesfamichael 
 #include <iostream>
 using namespace std;
 int main()
