@@ -1,4 +1,4 @@
-#include <ctype.h>
+#include <cctype>
 #include <iostream>
 using namespace std;
 int main(){
