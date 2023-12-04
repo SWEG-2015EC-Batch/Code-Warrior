@@ -1,8 +1,6 @@
-#include <stdio.h>
-#include <ctype.h>
 #include <iostream>
 #include <math.h>
-#include <string>
+
 using namespace std;
 int main(){
     float wight, hight, BMI;
