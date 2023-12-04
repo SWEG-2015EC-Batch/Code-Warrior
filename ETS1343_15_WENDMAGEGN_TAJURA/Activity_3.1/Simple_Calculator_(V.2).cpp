@@ -3,7 +3,7 @@
 using namespace std;
 int main(){
     char op;
-    int num1, num2;
+    int num1, num2, stop;
     float sum, subtract, multiply, divide, modulo; 
     //Use do-while statement to do work the task for many times and to excute
     do{
@@ -54,7 +54,10 @@ int main(){
                 cout<<"Enter 0 to exit: "<<endl;
         }
             cout<<endl;
+        //give the choice to the User if he/she want to continue or not.
+            cout<<"Do you  went to continue or stop? To stop press 0 otherwise press any numbers:  ";
+            cin>>stop;
            
-    } while(true);
+    } while(stop != 0);
   return 0;
 }
