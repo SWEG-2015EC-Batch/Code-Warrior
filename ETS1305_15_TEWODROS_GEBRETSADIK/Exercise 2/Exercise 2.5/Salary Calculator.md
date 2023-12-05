@@ -3,7 +3,7 @@ The program is designed to calculate the gross salary, net salary, and bonus pay
 However, the program does not handle any error cases, such as negative values for working hours or bonus rate, which could lead to unexpected results or errors.
 Algorithm Design:
 1. Start step
-2. Declare variables for employee_name (string), weekly_working_hours (int), bonus_rate_per_hour (double), base_salary (double), gross_salary (double), net_salary (double), bonus_payment (double), pension_amount (double), and tax_amount (double).
+2. Declare variables for weekly_working_hours (int), bonus_rate_per_hour (double), base_salary (double), gross_salary (double), net_salary (double), bonus_payment (double), pension_amount (double), and tax_amount (double).
 3. Prompt the user to enter the employee name and store the input in the variable 'employee_name'.
 4. Prompt the user to enter the weekly working hours and store the input in the variable 'weekly_working_hours'.
 5. Prompt the user to enter the bonus rate per hour and store the input in the variable 'bonus_rate_per_hour'.
@@ -19,3 +19,15 @@ Algorithm Design:
 14. ![283974715-b0399c66-638f-4e79-838c-952b7f88531c](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149199747/482ed37f-c5bc-4d1a-88bf-172557e70c1e)
 
 
+flowchart TB
+    A(Start) --> B[/Enter your name/]
+    B --> C[/Enter your weekly working hours/]
+    C --> D[/Enter the bonus rate per hour/]
+    D --> E[/Enter your base salary/]  
+
+E --> F[Calculate bonus payment, gross salary, penshion, income tax, and net salary]
+    
+    F --> G[/Output= Your bonus payment is bonusPayment/]
+    G --> H[/Output= Your gross salary is grossSalary/]
+    H --> I[/Output= Your net salary is netSalary/]
+    I --> J(End)
