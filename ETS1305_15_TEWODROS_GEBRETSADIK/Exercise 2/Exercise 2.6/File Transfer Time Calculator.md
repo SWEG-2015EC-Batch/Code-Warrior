@@ -17,5 +17,5 @@ Algorithm Design:
    - seconds = fmod(time_taken, 60) // remaining seconds
 5. Output the time taken to send the file in the format: "days, hours, minutes, seconds"
 6. stop
-7. ![283976365-34bab0be-e1d9-468a-8b59-ace942c7c4b2](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149199747/0ac20dc7-3a62-4b08-93dc-bda9905d05ac)
+ ![283976365-34bab0be-e1d9-468a-8b59-ace942c7c4b2](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149199747/0ac20dc7-3a62-4b08-93dc-bda9905d05ac)
 
