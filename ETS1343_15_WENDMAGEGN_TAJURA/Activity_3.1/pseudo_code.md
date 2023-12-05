@@ -11,3 +11,24 @@ Step(9):- END
 
 
 ##FLOW CHART
+```mermaid
+flowchart TB
+    A(Start) --> B[/Enter a TWO number, num1 and num2
+      Read operator(+, -, *, /, %), /]
+    B--> C[Process The input data validation]-->B
+    C--> |NOT Valid|B[/Enter a TWO number, num1 and num2
+      Read operator(+, -, *, /, %)/]
+    C--> D{Use Switch case}
+    D--> E[process Sum;]
+    D--> F[Process Subtract]
+    D--> G[Process Multiply]
+    D --> H[Process Divide]
+    H--> L{different from Zero}
+    L--> M[Process divide the number]-->J
+    D--> I[Process Modulo]
+    I--> N{different from Zero}
+    N--> O[Process modulo]-->J
+    I--> J[/Display The Result of Operation(+, -, *, /, %)/]
+    J--> K(End)
+    
+```
