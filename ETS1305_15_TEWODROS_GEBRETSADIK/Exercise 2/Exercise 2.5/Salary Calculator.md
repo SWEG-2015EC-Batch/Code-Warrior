@@ -16,18 +16,7 @@ Algorithm Design:
 12. Display the employee's name, gross salary, net salary, and bonus payment.
 13. stop.
 
-14. ![283974715-b0399c66-638f-4e79-838c-952b7f88531c](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149199747/482ed37f-c5bc-4d1a-88bf-172557e70c1e)
+ ![283974715-b0399c66-638f-4e79-838c-952b7f88531c](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149199747/482ed37f-c5bc-4d1a-88bf-172557e70c1e)
 
 
-flowchart TB
-    A(Start) --> B[/Enter your name/]
-    B --> C[/Enter your weekly working hours/]
-    C --> D[/Enter the bonus rate per hour/]
-    D --> E[/Enter your base salary/]  
 
-E --> F[Calculate bonus payment, gross salary, penshion, income tax, and net salary]
-    
-    F --> G[/Output= Your bonus payment is bonusPayment/]
-    G --> H[/Output= Your gross salary is grossSalary/]
-    H --> I[/Output= Your net salary is netSalary/]
-    I --> J(End)
