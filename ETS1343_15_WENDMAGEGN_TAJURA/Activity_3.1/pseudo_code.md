@@ -9,20 +9,21 @@ Step(7):- Process Divide, and Modulo
 Step(8):- Print the Operation Result
 Step(9):- END
 
+![20231204_101101](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149233683/545033f3-895f-48f3-8c4a-63080677b0a5)
+
+![20231204_101110](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149233683/1ab09749-171d-43dd-85ee-b7272e38fa53)
 
 ##FLOW CHART
 ```mermaid
 flowchart TB
-    A(Start) --> B[/Enter a TWO number, num1 and num2
-      Read operator(+, -, *, /, %), /]
+    A(Start) --> B[/Enter a TWO number, num1 and num2, Read operator(+, -, *, /, %), /]
     B--> C[Process The input data validation]-->B
-    C--> |NOT Valid|B[/Enter a TWO number, num1 and num2
-      Read operator(+, -, *, /, %)/]
+    C--> |NOT Valid|B[/Enter a TWO number, num1 and num2, Read operator(+, -, *, /, %)/]
     C--> D{Use Switch case}
-    D--> E[process Sum;]
-    D--> F[Process Subtract]
-    D--> G[Process Multiply]
-    D --> H[Process Divide]
+    D--> E[process Sum;]-->J
+    D--> F[Process Subtract]-->J
+    D--> G[Process Multiply]-->J
+    D--> H[Process Divide]
     H--> L{different from Zero}
     L--> M[Process divide the number]-->J
     D--> I[Process Modulo]
