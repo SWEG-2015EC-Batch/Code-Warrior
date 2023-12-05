@@ -18,7 +18,12 @@ Algorithm Design:
 
 6. print the result of x raised to the power of y.
 
-
 7. stop
+
+ 
+ 
+ 
+ 
+ 
  ![283976267-6d3ee947-1a73-41de-8385-b30f224a6524 (1)](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149199747/d04f8c87-c0ae-43e1-ab71-da9ec86f04e1)
 
