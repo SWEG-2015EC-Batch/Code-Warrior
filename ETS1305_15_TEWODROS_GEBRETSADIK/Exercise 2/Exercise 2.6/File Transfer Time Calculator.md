@@ -1,6 +1,7 @@
 Problem Analysis:
 The problem is to calculate the time taken to send a file based on the file size and the transmission speed.
 The time taken needs to be converted from seconds to days, hours, minutes, and seconds for better understanding.
+
 Algorithm Design:
 1. Start step
 2. Declare and initialize the variables:
