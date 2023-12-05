@@ -15,18 +15,17 @@ Algorithm Design:
 
 4. Check if the input is a valid alphabet letter using the 'isalpha' function.
 
-5.
-6. If the input is a valid alphabet letter:
+5. If the input is a valid alphabet letter:
  
    - Convert the letter to uppercase using 
 
     - Convert the letter to lowercase using 
 
-8. If the input is not a valid alphabet letter, display an error message.
+6. If the input is not a valid alphabet letter, display an error message.
 
-9. stop
+7. stop
 
 
 
-10. ![283976139-915aba99-954a-45b6-80d3-5f2c33f4348f](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149199747/b6a05f53-f2ea-435c-95f1-73ef2085716a)
+ ![283976139-915aba99-954a-45b6-80d3-5f2c33f4348f](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149199747/b6a05f53-f2ea-435c-95f1-73ef2085716a)
 
