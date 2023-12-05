@@ -12,7 +12,7 @@ int main(){
         cout<<"Choose the operator (+, -, *, /, %) OR enter 0 to exit. "<<endl;
         cin>>op;
         //Use single if-- statement to exit the program
-        if(op == '0'){
+        if(stop == '0'){
             cout<<"Calculator exited."<<endl;
             cout<<"Thank you, if you want to use again please run the program.";
             break;
