@@ -1,15 +1,21 @@
-Problem Analysis:
-The problem is to calculate the Body Mass Index (BMI) of a person based on their height and weight. 
+Problem Analysis: The problem is to calculate the Body Mass Index (BMI) of a person based on their height and weight. 
 The BMI is calculated using the formula: weight / (height * height). 
-The program needs to read the height and weight of the person, calculate the BMI, and display the result.
+The program needs to read the height and weight of the person,
+calculate the BMI, and display the result. 
+
+
 Algorithm Design:
-1. start step
-2.Input:Prompt the user to input their weight in kilograms.
-3.Prompt the user to input their height in meters. BMI Calculation:Calculate BMI using the formula:
-4.BMI=(height*height)*weight 
-5.​Output display the calculated BMI.
-6.stop
 
+step 1 start
 
-![283974675-01c1ad92-4d2e-4570-aba6-4e5f77328b20](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149199747/75b47d8f-1b88-4640-8f5c-a5f2ada5793e)
+step 2.Input:Prompt the user to input their weight in kilograms. 
 
+step 3.Prompt the user to input their height in meters. BMI Calculation:Calculate BMI using the formula: 
+
+step 4.BMI=(height*height)*weight 
+
+step 5.​Output display the calculated BMI.
+
+step 6. stop
+
+![283974675-01c1ad92-4d2e-4570-aba6-4e5f77328b20 (1)](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149199747/062cf78c-771d-4d2e-b2c1-303df9155269)
