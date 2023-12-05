@@ -1,4 +1,5 @@
-//BMI calculator  using if ... else if statements
+//BMI calculator using if ...else if statements
+
 #include <iostream>
 using namespace std;
 
