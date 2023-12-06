@@ -20,3 +20,4 @@ income tax) + Overtime payment
 
 ##FLOW CHART##
 
+![IMG_20231207_020756_597](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149209819/8d2ae7a1-dc08-4e67-863a-ab06b2cadc00)
