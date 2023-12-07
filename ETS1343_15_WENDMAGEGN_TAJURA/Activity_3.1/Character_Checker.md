@@ -1,2 +1,3 @@
 ****PROBLEM ANALYSIS****
 
+![IMG_20231207_030123_382](https://github.com/SWEG-2015EC-Batch/Code-Warrior/assets/149209819/a5c46123-e0f1-4155-8c20-4688960d098f)
