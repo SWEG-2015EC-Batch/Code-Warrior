@@ -2,15 +2,17 @@
 using namespace std;
 
 int main() {
-    char i, j;
+    char i, j, rows;
     
     bool stop = false;
     
     do{
-    cout << "The number of Pattern is look like: \n\n";
+        cout<<"Enter an Alphabet A upto Z: ";
+        cin>>rows;
+    cout << "An Alphabet of Pattern is look like: \n\n";
 
-    for ( i = 'A'; i <= 'E'; i++) {
-        for ( j = 'A'; j <= 'E'; j++) {
+    for ( i = 'A'; i <= rows; i++) {
+        for ( j = 'A'; j <= rows; j++) {
             cout <<j<< " ";
         }
          
