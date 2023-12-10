@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    char i, j;
+    int i, j;
     
     bool stop = false;
     
