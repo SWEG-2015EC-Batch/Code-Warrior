@@ -7,7 +7,7 @@ int main() {
     bool stop = false;
     
     do{
-    cout << "The number of Pattern is look like: \n\n";
+    cout << "An Alphabets of Pattern is look like: \n\n";
 
     for ( i = 'a'; i <= 'e'; i++) {
         for ( j = 'a'; j <= 'e'; j++) {
