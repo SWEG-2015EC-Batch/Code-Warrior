@@ -1,6 +1,6 @@
     input = number
           = character
-    process 
+    process  
      = if char = a it means reverse
                    by assigning reverse = 0, while num!=0( new number  = num % 1 then reverse = (reverse * 10) + new_reverse 
                 num = num / 10) reverse = result
