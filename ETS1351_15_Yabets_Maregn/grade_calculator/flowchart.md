@@ -1,4 +1,5 @@
-                              ```mermaid
+
+```mermaid
 graph TD;
 A(start) --> B[/input mark/]
 B --> C{is mark in [100-90}
