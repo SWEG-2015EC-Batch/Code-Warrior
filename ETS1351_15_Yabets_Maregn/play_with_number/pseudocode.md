@@ -51,28 +51,31 @@
               else goto step 32
     step 32= return = sum
     step 33 = if charcter = 'd' goto step 34
-              else = goto step 
+              else = goto step 43
     step 34 = multi = 1
     step 35 = if number = 0 goto step 36
               else goto step 37
     step 36 = result = number
+    step 37 = new_multi = num % 10
+    step 38 =  if new_multi %2=0 goto step 39
+              else goto step 40
+    step 39 = multi *= new_multi
+    step 40 = num = num / 10
+    step 41 =  if num != 0 go to step 37
+              else goto stop 42
+    step 42 = result = multi
+    step 43 = if character = 'e' goto step 44
+              else go to step 51
+    step 44 = last_digit = num % 10;
+    step 45 = if num <= 9 && num >= -9  goto step 46
+              else goto step 47
+    step 46 = result = num
+    step 47 =  new_Num = num % 10
+    step 48 = num = num / 10
+    step 49 = if num >10 go to step 47
+              else goto step 50
+    step 50 = result = "last digit = "last_digit
+                         "first digit = "num
+                          "sum = "num + last_digit.
+    step 51 = 
 
-    multi = 1;
-      if (num == 0)
-      {
-         cout << num;
-      }
-      else
-      {
-         while (num != 0)
-         {
-            new_multi = num % 10;
-            if (new_multi % 2 == 0)
-            {
-               multi *= new_multi;
-            }
-            num = num / 10;
-         }
-         cout << multi;
-
-    
