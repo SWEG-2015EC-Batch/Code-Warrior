@@ -1,5 +1,4 @@
 ```mermaid
-
 graph TD;
 A(start) --> B[/input mark/]
 B --> C{is mark in [100-90}
@@ -19,4 +18,5 @@ O -- Yes -->P[/grade = D/]
 O -- No --> Q{is mark in (30-0]}
 Q --Yes --> R[/grade=F/]
 Q -- No --> S(stop)
+
 ```
