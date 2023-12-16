@@ -1,5 +1,5 @@
 ```mermaid
-graph TD;
+graph TD
 A(Start) --> B(Read num1 num2 and operator)
 B --> C{Is operator ?}
 C -- Yes --> D[Result = num1 + num2]
