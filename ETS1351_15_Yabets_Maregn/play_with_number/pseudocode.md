@@ -208,6 +208,84 @@
     step 138 = result= "it is strong"
     step 139 = result = "it isnot strong"
     step 140 = if character = 'k' goto step 141
-               else goto step
-    step 141 = 
+               else goto step 195
+    step 141 = int qq = num
+    step 142 = if num = 0 goto step 143
+               else goto step 144
+    step 143 = result =  "infinity, so it isn't perfect "
+    step 144 = if num = 1 goto step 145
+               else = goto step 146
+    step 145 = result = " 1, so it is perfect. "
+    step 146 =  num /= 2
+    step 147 = k += 1
+    step 148 = kkk += num
+    step 149 = num /= 3
+    step 150 =  j += 1
+    step 151 =  jjj = jjj + num - 4
+    step 152 = num /= 5
+    step 153 =  l += 1;
+    step 154 =  lll = lll + num - 6
+    step 155 =  num /= 7
+    step 156 = p += 1
+    step 157 = ppp = ppp + num - 8
+    step 158 = if num % 7 == 0 go to step 155
+                else goto step 158
+    step 159 = if num%5 ==o goto step 152
+                else goto step 160
+    step 160 = if num%3=0goto step 149
+               else gotostep 161
+    step 161 = if num % 2=0 goto step 146
+               else goto step 162
+    step 162 = if num !0 goto step 146
+               else goto step 163
+    step 163 =  kk = pow 2^k
+    step 164 = if kk = 1 goto step 165
+               else goto step 166
+    step 165 = kk=0
+    step 165 = kk = kk + pow(2, (k - 1))
+    step 166 = k -= 1
+    step 167 =if  k!==1 goto step 165
+               else go to step 168
+    step 168 = if kk!=1 goto step 165
+               else goto step 169
+    step 169 =  jj = pow 3^jjjj
+    step 170 = if jj = 1 goto step 171
+               else goto step 172
+    step 171 = jj=0
+    step 172 = jj = jj+ pow(2, (jjjj - 1))
+    step 173 = jjjj -= 1
+    step 174 =if  jjjj!==1 goto step 171
+               else go to step 175
+    step 175 = if jj!=1 goto step 171
+               else goto step 176
+    step 176 =  ll = pow 2^l
+    step 177 = if ll= 1 goto step 178
+               else goto step 179
+    step 178 = ll=0
+    step 179 = ll = ll + pow(2, (l - 1))
+    step 180 = l -= 1
+    step 181 =if  l!==1 goto step 178
+               else go to step 182
+    step 182 = if kk!=1 goto step 178
+               else goto step 183
+    step 183 =  pp = pow 2^p
+    step 184 = if oo = 1 goto step 185
+               else goto step 186
+    step 185 = pp=0
+    step 186 = pp = pp + pow(2, (p - 1))
+    step 187 = p -= 1
+    step 188 =if  p!==1 goto step 185
+               else go to step 185
+    step 189 = if kk!=1 goto step 185
+               else goto step 190
+    step 190 = q = kk + ll + jjjj + pp + qq + kkk + lll + ppp + jjj + 1
+    step 191 =  w = q - qq
+    step 192 = if w=qq goto step 193
+               else goto step 194
+    step 193 = result = "number is perfect"
+    step 194 = result = "number isn't perfect"
+    step 195 = result = "male sure to enter among [a,b,c,d,e,f,g,h,i,j,k] "
+    step 196 = print result
+    step 197 = stop
+
 
