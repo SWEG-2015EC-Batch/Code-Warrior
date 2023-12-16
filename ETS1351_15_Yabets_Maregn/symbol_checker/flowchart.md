@@ -14,11 +14,12 @@ H -- No --> L{Is among a,e,i,o,u}
 L -- Yes --> M[Result = Vowel lowercase letter]
 L -- No --> N[Result = consonant lowercase letter]
 G -- No --> O[Result = special character.]
-O --> Q(Stop)
-E --> Q(Stop)
-F --> Q(Stop)
-J --> Q(Stop)
-K --> Q(Stop)
-M --> Q(Stop)
-N --> Q(Stop)
+O --> P[/Result/]
+E --> P[/Result/]
+F --> P[/Result/]
+J --> P[/Result/]
+K --> P[/Result/]
+M --> P[/Result/]
+N --> P[/Result/]
+P --> Q(Stop)
 ``` 
