@@ -24,6 +24,6 @@ H --> R[/Print result/]
 K --> R[/Print result/]
 L --> R[/Print result/]
 O --> R[/Print result/]
-P --> R[/Print result/]
+P --> S
 R --> S
 ```
