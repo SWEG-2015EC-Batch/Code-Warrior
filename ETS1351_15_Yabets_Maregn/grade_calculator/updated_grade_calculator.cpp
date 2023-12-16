@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
     float mark, test, quiz, project, assignment, final;
-    cout << "enter mark of test:- ";
+    cout << "enter mark of test:- "; 
     cin >> test;
     if (test <= 15 && test >= 0)
     {
