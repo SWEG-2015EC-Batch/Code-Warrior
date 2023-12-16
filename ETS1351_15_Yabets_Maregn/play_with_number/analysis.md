@@ -28,6 +28,32 @@
                                 num = num / 10)
                            multiple = result
           if char = e it means inding the first and last digit of the number also thier sum.
-                 
+                     last_digit = num % 10
+                   if num <= 9 and num >= -9 
+                          result = num       
+                          else
+                         while num > 10 (
+                      int new_Num = num % 10
+                         num = num / 10)
+                         sumation = num + last digit
+                         result = num , last digit, sumation. 
+        if char = f it means swapping the first and last digit of the number.
+                    x = num
+                   digit = 0
+                  last Digit = num % 10
+                   if num <= 9 and  num >= -9
+                       result = num
+                  else(
+                     while num > 10
+                    new number = num % 10
+                    new number = 1
+                      digit = digit + new number
+                    num = num / 10)
+                    
+                   v = 10 the power of digit
+                     c = x - (number * v + last_Digit)
+                    a = (last_Digit * v) + c + number
+                      result = a
+       if  
                       
                       
