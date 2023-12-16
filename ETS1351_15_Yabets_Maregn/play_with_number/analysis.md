@@ -54,6 +54,48 @@
                      c = x - (number * v + last_Digit)
                     a = (last_Digit * v) + c + number
                       result = a
-       if  
-                      
-                      
+       if  char = g Checking whether a number is palindrome or not.
+                   plaindrome means which remains the same with number is reversed. so to check it: -
+                     reverse = 0
+                   palindrom = g
+                    if num == 0
+                 ( reverse = 0
+                   result = reverse)
+                     else  while g != 0(
+                 new Number = g % 10
+                  reverse = (reverse * 10) + new Number
+                  g = g / 10)
+                  if reverse = palindrom
+                   result = it is palindrome
+                  else result = it is not palindrome
+         if char = h it means Finding the frequency of each digit in a given integer and display it in table format
+                   z = 0
+              while numm != 0(
+              y = number % 10
+              number = number / 10;
+                 z = z + 1)
+                      if y = 0( aa =aa + 1)
+                      if y = 1( bb =bb + 1)
+                       if y = 2(cc =cc + 1)
+                     if y = 3(dd == dd +1)
+                     if y = 4(e == ee +1)
+                    if y = 5(ff == ff +1)
+                    if y = 6(gg == gg +1)
+                     if y = 7(hh == hh +1)
+                       if y = 8(ii == ii +1)
+                        if y = 9(jj == jj +1)
+                   result( = 0 =  aa
+                           = 1 =  bb   
+                           = 2 =  cc
+                           = 3 =  dd 
+                           = 4 =  ee
+                           = 5 =  ff
+                           =6 =   gg
+                           =7 =   hh
+                           =8 =   ii
+                           =9 =   jj)
+
+     if char = i it means Check if a number is Armstrong or not
+                         armstrong number is a 3 digit number that equals the sum of its digits, each raised to a power.
+                 
+      
