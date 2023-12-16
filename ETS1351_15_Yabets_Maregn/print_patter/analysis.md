@@ -18,10 +18,12 @@
          the column will run with int j3 = 10; j3 <= (59 - i3); j3++ and display "  " break line after itiration
     for inverted full pyramid for row will run in for loop with  i4 = 10; i4 <= 49; ++i4 break line after itiration
          the column will run in for loop with  int j4 = 10; j4 <= 49; ++j4
+    
          and we will put condition if j4 >= i4 if it is we will print in the predintialized d (10) the will incrimente it. 
             else we will display "  "
     for full pyramid we will run row with for loop with i5 = 10; i5 <= 49; ++i5 break line after itiration
       and the column with 5 = 10; j5 <= 49; ++j5 in for loop
         and we will put condition if j5 >= i5 if it is we will print in the predintialized e (10) the will incrimente it. 
-            else we will display " ."
+            else we will display " "
         
+       output = the for looped conditions. 
