@@ -3,14 +3,16 @@ using namespace std;
 
 int main() {
     int i, j;
-    
+    int num,
     bool stop = false;
     
     do{
+        cout<<"Enter a Number: ";
+        cin>>num;
     cout << "The number of Pattern is look like: \n\n";
 
-    for ( i = 1; i <= 5; i++) {
-        for ( j = 1; j <= 5; j++) {
+    for ( i = 1; i <= num; i++) {
+        for ( j = 1; j <= num; j++) {
             cout <<j<< " ";
         }
          
