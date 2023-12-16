@@ -13,4 +13,66 @@
            type 'j' for Checking if a number is strong or not.
            type 'k' for Checking if a number is perfect or not.
     step 4 = read charcter
-    step 5 = 
+    step 5 = if character = 'a' go to step 6
+            else go to step 14
+    step 6 = reverse = 0
+    step 7 = if number number = 0 go to step 8
+              else go to step 9
+    step 8 = result = 0
+    step 9 = new reverse = num % 10
+    step 10 = reverse = (reverse * 10) + new_reverse
+    step 11 = num = num / 10
+    step 12 = if num !=0 go to step 9
+            = else go to step 13
+    step 13 = result = reverse
+    step 14 = if character = 'b' go to step 15
+              else go to step 24
+    step 15 = digit = 0;
+    step 16 = if number =0 go to step 15
+            = else goto step 16
+    step 17 = result = 1
+    step 18 = new_digit = num % 10
+    step 19 = new_digit = 1
+    step 20 = digit += new_digit
+    step 21 = num /= 10
+    step 22 = if number != 0 go to step 18
+              else go to step 23
+    step 23 = result = digit
+    step 24 = if character = 'c' goto step 20
+              else goto step 33
+    step 25 = sum = 0
+    step 26 = if number = 0 go to step 27
+              else goto step 28
+    step 27 = result = 0
+    step 28 = new_sum = num % 10
+    step 29 = sum += new_sum
+    step 30 = num /= 10
+    step 31 = if num !=0 goto step 28
+              else goto step 32
+    step 32= return = sum
+    step 33 = if charcter = 'd' goto step 34
+              else = goto step 
+    step 34 = multi = 1
+    step 35 = if number = 0 goto step 36
+              else goto step 37
+    step 36 = result = number
+
+    multi = 1;
+      if (num == 0)
+      {
+         cout << num;
+      }
+      else
+      {
+         while (num != 0)
+         {
+            new_multi = num % 10;
+            if (new_multi % 2 == 0)
+            {
+               multi *= new_multi;
+            }
+            num = num / 10;
+         }
+         cout << multi;
+
+    
