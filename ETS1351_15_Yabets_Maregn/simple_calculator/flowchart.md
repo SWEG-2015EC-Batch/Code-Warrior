@@ -17,4 +17,12 @@ N -- Yes --> O[/Result = num1 num2/]
 N -- No --> P[/Module can't continued due to number 2 = 0/]
 M -- No --> Q[/Make sure to enter among/]
 Q --> R(Stop)
+D --> R(Stop)
+F --> R(Stop)
+D --> R(Stop)
+H --> R(Stop)
+K --> R(Stop)
+L --> R(Stop)
+O --> R(Stop)
+P --> R(Stop)
 ```
