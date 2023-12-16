@@ -77,5 +77,137 @@
     step 50 = result = "last digit = "last_digit
                          "first digit = "num
                           "sum = "num + last_digit.
-    step 51 = 
+    step 51 = if character = 'f' goto step 52
+              else goto step 66
+    step 52 = x = num
+    step 53 = digit = 0
+    step 54 =  last_Digit = num % 10
+    step 55 = if num <= 9 && num >= -9 go to step 56
+              else goto step 57
+    step 56 = result = num
+    step 57 = newnum = num % 10
+    step 58 =  newnum = 1
+    step 59 = digit = digit + newnum
+    step 60 = num /= 10
+    step 61 = if num>10 goto step 57
+              else goto step 62
+    step 62 = v = pow(10, (digit))
+    step 63 = c = x - (num * v + last_Digit)
+    step 64 = a = (last_Digit * v) + c + num
+    step 65 = result = a
+    step 66 = if character = 'g' goto step 67
+              else goto step 78
+    step 67 = reverse = 0
+    step 68 = constant palindrom = g
+    step 69 = if num = 0 goto step 70
+              else goto step 71
+    step 70 = result = "it is palindrome"
+    step 71 =  newNum = g % 10
+    step 72 =  reverse = (reverse * 10) + newNum
+    step 73 =  g = g / 10
+    step 74 = if num!=0 goto step 71
+              else goto step 75
+    step 75 = if reverse = palindrome goto step 76
+              else go step 77
+    step 76 = result = "it is palindrome"
+    step 77 = result = "it is not palindrome"
+    step 78 = if character = 'h' goto step 79
+            else goto step 105
+    step 79 = z ==aa==bb==cc==dd==ee==ff==gg==hh==ii==jj= 0
+    step 80 = y = numm % 10
+    step 81 =  numm /= 10
+    step 82 = z += 1
+    step 83 = if y=0 goto step 84
+               else go to step 85
+    step 84 = aa += 1
+    step 85 = if y=1 goto step 86
+             else go to step 87
+    step 86 = bb +=1
+    step 87= if y=2 goto step 88
+               else go to step 89
+    step 88 = cc +=1
+    step 89 = if y=3 goto step 90
+               else go to step 91
+    step 90 = dd +=1
+    step 91 = if y=4 goto step 92
+               else go to step 93
+    step 92= ee +=1
+    step 93 = if y=5 goto step 94
+            else go to step 95
+    step 94 = ff +=1
+    step 95 = if y=6 goto step 96
+               else go to step 97
+    step 96 =  gg+=1
+    step 97 = if y=7 goto step 98
+               else go to step 99
+    step 98 = hh +=1
+    step 99 = if y=8 goto step 100
+               else go to step 101
+    step 100 = ii +=1
+    step 101 = if y=9 goto step 102
+               else go to step 103
+    step 102 = jj +=1
+    step 103 = if num!=0 goto step 80
+              else goto step 104
+    step 104 = result = "0 = "aa
+                        "1 = "bb
+                        "2 = "cc
+                        "3 = "dd
+                        "4 = "ee
+                        "5 = "ff
+                        "6 = "gg
+                        "7 = "hh
+                        "8 = "ii
+                        "9 = "jj
+      
+    step 105 = if character = 'i' goto step 106
+               else goto step 124
+    step 106 = constant wwww = num, c = 0
+    step 107 = if num <100 gotostep 108
+               else goto step 109
+    step 108 = result = "number isn't 3 digit. "
+    step 109 = if num >999 goto step 110
+               else goto step 111
+    step 110 = result = "number isn't 3 digit. "
+    step 111 =  bbbb = nummm % 10
+    step 112 = cccc += 1
+    step 113 = if cccc=1 goto step 114
+               else goto step 115
+    step 114 = xxxx = bbbb
+    step 115 = if cccc=2 goto step 116
+               else goto step 117
+    step 116 = yyyy=bbbb
+    step 117 =  zzzz=bbbb
+    step 118 = num/10
+    step 119 = if num !=0 goto step 111
+               else goto step 120
+    step 120 = cal = (xxxx * xxxx * xxxx) + (yyyy * yyyy * yyyy) + (zzzz * zzzz * zzzz)
+    step 121 = if wwww = num goto step 122
+               else goto step 123
+    step 122 = result = "the number is armstrong"
+    step 123 = result = "the number isn't armstrong"
+    step 124 = if charcter = 'j' goto step 125
+               else = goto step 140
+    step 125 =  wwwww = 1, zzzzz = 0
+    step 126 = const int vv = num
+    step 127 = if num = 0 goto step 128
+            else goto step 129
+    step 128 = result = = 0
+    step 129 =  yyyyy = nnum % 10
+    step 130 =  wwwww *= yyyyy
+    step 131 =  yyyyy -= 1
+    step 132 = if yyyyy!=1 goto step 130
+               else goto step 133
+    step 133 = zzzzz += wwwww
+    step 134 =  wwwww = 1
+    step 135 = num /= 10
+    step 136 = if num !=0 goto step 129
+               else goto step 137
+    step 137 = if zzzzz = vv goto step 138
+            else goto step 139
+    step 138 = result= "it is strong"
+    step 139 = result = "it isnot strong"
+    step 140 = if character = 'k' goto step 141
+               else goto step
+    step 141 = 
 
