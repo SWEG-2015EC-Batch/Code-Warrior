@@ -1,6 +1,6 @@
 ```mermaid
 graph TD
-A(Start) --> B[Read character]
+A(Start) --> B[/Read character/]
 B --> C{Is Digit}
 C -- Yes --> D{Is even}
 D -- Yes --> E[Result = even number]
