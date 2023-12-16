@@ -8,5 +8,5 @@ E --> G[NetSalary = GrossSalary - Tax - Pension + OverTimePayment ]
 C -- NO --> F[OverTimePayment = 0]
 F --> G[NetSalary = GrossSalary - Tax - Pension + OverTimePayment ]
 G --> H[/NetSalary/]
-H --> I(stop)
+H --> I(stop) 
 ```
