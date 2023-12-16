@@ -1,2 +1,3 @@
-flowchart TD
+```mermaid
     Start --> Stop
+```
