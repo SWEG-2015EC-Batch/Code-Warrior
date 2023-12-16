@@ -1,7 +1,7 @@
 ```mermaid
 graph TD
-A(Start) --> B[Read num1 num2 and operator]
-B --> C{Is operator +}
+A(Start) --> B[Read num1, num2 and operator]
+B --> C{Is operator '+'}
 C -- Yes --> D[Result = num1 + num2]
 C -- NO --> E{Is operator -}
 E -- Yes --> F[Result = num1 - num2]
