@@ -1,8 +1,9 @@
  ```mermaid
 graph TD;
 A(start) --> B[Input mark]
-B --> C{Is mark in 100 to 90?}
+B --> C{Is mark in 100 - 90?}
 C -- Yes --> D[grade = A]
+D -- S(stop) 
 C -- No --> E{Is mark in 90 to 80?}
 E -- Yes --> F[grade = A]
 E -- No --> G{Is mark in 80 to 75?}
