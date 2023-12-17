@@ -264,7 +264,7 @@ int main()
       cout << "Enter Number :- ";
       cin >> nummm;
       int wwww = nummm;
-      c = 0;
+      cccc = 0;
       if (nummm < 100)
       {
          cout << nummm << " isn't 3 digit. ";
