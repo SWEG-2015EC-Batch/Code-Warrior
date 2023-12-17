@@ -10,6 +10,6 @@ G -- Yes --> H[Result = 0]
 G -- No --> I[New reverse = num % 10]
 I --> J{Is number != 0}
 J -- Yes --> I
-J -- No --> K[result = Reverse]
+J -- No --> K[Result = Reverse]
 E -- No --> L(Stop)
 ```
