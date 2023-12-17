@@ -163,7 +163,27 @@ u17 --> zz
 u16 -- no --> u18[result = it is not a armstrong number]
 u18 --> zz
 t -- No --> v{if choose 'j'}
-v -- Yes --> w
+v -- Yes --> w[ wwwww = 1]
+w --> w1[zzzzz = 0]
+w1 --> w2[const vv = nnum]
+w2 --> w3{ is nnum == 0}
+w3 -- yes --> w4[result = 0]
+w4 --> zz
+w3 -- no --> w5[yyyyy = nnum % 10]
+w5 --> w6[wwwww *= yyyyy]
+w6 --> w7[yyyyy -= 1]
+w7 --> w8{is yyyyy != 1}
+w8 -- yes --> w6
+w8 -- no -->w9[zzzzz += wwwww]
+w9 --> w10[wwwww = 1]
+w10 --> w11[nnum /= 10]
+w11 --> w12{is nnum != 0}
+w12 -- yes -->w5
+w12 -- no -->w13{is zzzzz == vv}
+w13 -- yes --> w14[result = 'it is strong']
+w14 --> zz
+w13 -- no --> w15[result = it is not strong]
+w15 --> zz
 v -- No --> x{if choose 'k'}
 x -- Yes --> y
 x -- No --> z[/please ame sure to enter a-k /]
