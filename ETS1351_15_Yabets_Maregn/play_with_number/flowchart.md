@@ -136,7 +136,32 @@ s2 -- yes --> s1
 s2 -- no --> s25[result =  '0 = 'aa,'1 = 'bb',2 = 'cc ,'3 = 'dd,'4 = 'ee, '5 = 'ff, '6 = 'gg, '7 = 'hh, '8 = 'ii, '9 = 'jj]
 s25 --> zz
 r -- No --> t{if choose 'i'}
-t -- Yes --> u
+t -- Yes --> u[wwww = nummm]
+u --> u1[cccc = 0]
+u1 --> u2{is nummm < 100}
+u2 -- yes -->u3[result = 'it is not 3 digit so']
+u3 --> zz
+u2 -- no --> u4{id nummm > 999}
+u4 -- yes --> u5[result = 'it is not 3 digit']
+u5 --> zz
+u4 -- no -->u6[bbbb = nummm % 10]
+u6 --> u7[cccc += 1]
+u7 --> u8{is cccc == 1}
+u8 -- yes -->u9[xxxx = bbbb]
+u9 --> u13
+u8 -- no -->u10{is cccc == 2}
+u10 -- yes --> u11[yyyy = bbbb]
+u11 --> u13
+u10 -- no --> u12[ zzzz = bbbb]
+u12 --> u13[nummm /= 10]
+u13 --> u14{is nummm != 0}
+u14 -- yes --> u6
+u14 -- no --> u15[cal = xxxx * xxxx * xxxx + yyyy * yyyy * yyyy + zzzz * zzzz * zzzz]
+u15 --> u16{is wwww == cal}
+u16 -- yes --> u17[result = the number is armstrong]
+u17 --> zz
+u16 -- no --> u18[result = it is not a armstrong number]
+u18 --> zz
 t -- No --> v{if choose 'j'}
 v -- Yes --> w
 v -- No --> x{if choose 'k'}
