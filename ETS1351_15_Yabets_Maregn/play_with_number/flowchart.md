@@ -15,5 +15,14 @@ B --> C[//Print "what do you want to do with the number
        type 'k' for Checking if a number is perfect or not "]
 C --> D[/Read Character/]
 D --> E{Is Character 'a'}
-E -- Yes --> F
+E -- Yes --> F[Reverse = 0]
+F --> G{Is number = 0}
+G -- Yes --> H[Result = 0]
+G -- No --> I[New reverse = num % 10
+              reverse = (reverse * 10) + new_reverse
+               num = num / 10]
+I --> J{Is number != 0}
+J -- Yes --> I
+J -- No --> K[result = Reverse]
+E -- No --> L(Stop)
 ```
