@@ -185,7 +185,36 @@ w14 --> zz
 w13 -- no --> w15[result = it is not strong]
 w15 --> zz
 v -- No --> x{if choose 'k'}
-x -- Yes --> y
+x -- Yes --> y[const qq = nnnum]
+y --> y1{nnnum == 0}
+y1 -- yes -->y2[result = 'infinity, so it isn't perfect']
+y2 --> zz
+y1 --no -->y3{is nnnum == 1}
+y3 -- yes --> y4[result = 'perfect number']
+y4 --> zz
+y3 -- no --> y5{nnnum != 0}
+y5 -- yes -->y6[nnnum /= 2]
+y6 --> y7[nnnum /= 2]
+y7 --> y8[kkk += nnnum]
+y8 --> y9[nnnum /= 3]
+y9 --> y10[j += 1]
+y10 --> y11[jjj = jjj + nnnum - 4]
+y11 --> y12[ nnnum /= 5]
+y12 --> y13[l += 1]
+y13 --> y14[lll = lll + nnnum - 6]
+y14 --> y15[nnnum /= 7]
+y15 --> y16[p += 1]
+y16 --> y17[ppp = ppp + nnnum - 8]
+y17 --> y18{is nnnum % 7 == 0}
+y18 -- yes -->y15
+y18 -- no -->y19{nnnum % 5 == 0}
+y19 -- yes --> y12
+y19 -- no --> y20{nnnum % 3 == 0}
+y20 -- yes --> y9
+y20 -- no --> y21{is nnnum % 2 == 0}
+y21 -- yes --> y7
+y21 -- no --> y22[kk =  , k]
+
 x -- No --> z[/please ame sure to enter a-k /]
 z --> zzz
 zz --> zzz(stop)
