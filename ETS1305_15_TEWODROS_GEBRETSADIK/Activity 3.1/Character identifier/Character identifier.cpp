@@ -1,5 +1,4 @@
-//Character identifier 
-//By Tesfamichael Tafere 
+//Character identifier  
 #include <iostream>
 #include <cctype>
 using namespace std;
