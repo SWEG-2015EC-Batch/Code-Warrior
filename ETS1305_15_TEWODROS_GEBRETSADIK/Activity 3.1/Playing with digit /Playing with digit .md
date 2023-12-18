@@ -1,8 +1,13 @@
-                problem analysis 
-The problem is to develop a program that enables the user to carry out different tasks on a specified number according to their preference. 
-The program should offer choices such as reversing the number, counting its digits, calculating the sum of its digits, 
-finding the product of even digits, swapping the first and last digit, 
-checking if it is a palindrome, displaying the frequency of digits, checking if it is an Armstrong, Strong, or Perfect number, and exiting the program.
+       Problem Analysis 
+
+input = number 
+
+Out put = result 
+   
+     Process 
+
+The program should offer choices such as reversing the number, counting its digits, calculating the sum of its digits, finding the product of even digits, swapping the first and last digit, checking if it is a palindrome, displaying the frequency of digits, checking if it is an Armstrong, Strong, or Perfect number, and exiting the program.
+
         
      pseudocode :
 
@@ -71,7 +76,9 @@ step 6. Switch based on the user's choice:
 
 step 7. End of switch
 
-step 8. stop
+step 8. Display the result 
+
+step 9. stop
   
           Flow chart 
 ```mermaid 
