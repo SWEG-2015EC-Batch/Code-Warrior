@@ -53,7 +53,7 @@ K -- Yes --> L{Is it Even?}
 L -- Yes --> M[/Even Digit/]
 L -- No --> N[/Odd Digit/]
 K -- No --> O[/Special Character/]
-F --> Q(End)
+F --> Q(Stop)
 G --> Q
 I --> Q
 J --> Q
