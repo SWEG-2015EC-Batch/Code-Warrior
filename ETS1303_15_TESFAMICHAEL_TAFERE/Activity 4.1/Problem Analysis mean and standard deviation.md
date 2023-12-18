@@ -1,23 +1,3 @@
-```mermaid
-graph TD
-    A(Start)--> B[Input n]
-    B --> C[Initialize sum, ave, SD, VR]
-    C --> D{Check if i <= n}
-    D -->|Yes| E[Input number]
-    E --> F[Add number to sum]
-    F --> G[Increment i]
-    G --> D
-    D -->|No| H[Calculate mean (ave)]
-    H --> I[Initialize VR]
-    I --> J{Check if num in numbers}
-    J -->|Yes| K[Calculate VR]
-    K --> I
-    J -->|No| L[Calculate SD]
-    L --> M[Output entered numbers]
-    M --> N[Output mean and SD]
-    N --> O(End)
-
-```
 
 Problem Analysis: Calculate Mean and Standard Deviation
 
@@ -35,3 +15,26 @@ Standard Deviation (SD) is then calculated as the square root of Variance divide
 Output:
 The application outputs the entered numbers.
 It also prints the calculated imply and preferred deviation.
+
+pseudocode:
+Start
+Input n
+Initialize sum, ave, SD, VR
+for i from 1 to n do
+    Input number
+    Add number to sum
+end for
+Calculate mean (ave) as sum / n
+Initialize VR
+for each num in numbers do
+    Calculate VR += (num - ave)^2
+end for
+Calculate SD as square root of VR / n
+Output "The entered numbers: "
+for each num in numbers do
+    Output num + " "
+end for
+Output "The mean for the entered numbers is: " + ave
+Output "The standard deviation is: " + SD
+End
+
