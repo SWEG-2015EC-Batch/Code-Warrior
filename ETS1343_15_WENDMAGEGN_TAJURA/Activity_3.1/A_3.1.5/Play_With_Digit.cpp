@@ -154,32 +154,29 @@ switch(choices){
     break;
 
     case 6:
-    int swapFirstLastDigit(int num) {
-    string numStr = to_string(num);  // Convert the number to a string for easy manipulation
-    char firstDigit = numStr[0];
-    numStr[0] = numStr[numStr.size() - 1];
-    numStr[numStr.size() - 1] = firstDigit;
-    return stoi(numStr);  // Convert the string back to an integer and return
-}
-        cout << "Enter (1.) Swap the first and last digit of a number" << endl;
-        cout << "Enter (0.) to Stope or Exit" << endl;
-        cout << "Enter your choice: ";
-        cin >> choices;
-  //Use  switch case
-        switch (choices) {
-            case 1:
-                cout << "Please enter an integer: ";
+   // Swap the first and last digit
+                int num;
+                cout << "Enter a number: ";
                 cin >> num;
-                cout << "Swapped number: " << swapFirstLastDigit(num) << endl;
-                break;
-            case 0:
-                cout << "Exiting... Good job.!" << endl;
-                break;
-            default:
-                cout << "Invalid choice. Please try again." << endl;
-        }
-        break;
 
+                int last_digit, temp = num, first_digit, power = 1;
+
+                last_digit = num % 10;
+                temp = num;
+
+                while (temp > 0) {
+                    first_digit = temp % 10;
+                    temp = temp / 10;
+                    power = power * 10;
+                }
+                power = power / 10;
+
+                int swapped_num = last_digit * power + num % (power);
+                swapped_num = swapped_num - last_digit + first_digit;
+
+                cout << "Number after swapping first and last digit: " << swapped_num << endl;
+                break;
+       
         case 7:
 
     int count = 0;
