@@ -25,7 +25,7 @@ Step 2- Variable declaration with data type character
 
 Step 3- check the input data if it is letter, digit (odd,even) or special character 
   
-  -if it is letter then check it whether it is  vowel or consonant 
+  - if it is letter then check it whether it is  vowel or consonant 
  
   - if  it is digit then check it Whether it is odd or even
 
