@@ -1,7 +1,25 @@
        Problem  analysis 
-The problem is to develop a program or code that computes an employee's net salary by taking into account their gross salary, hours worked, overtime bonus rate, pension deduction , and income tax. The income tax calculation should be based on predetermined tax rates for various salary brackets. The program should also factor in overtime compensation for hours worked beyond 40 hours, allowing the user to input the overtime bonus rate.
 
-    Pseudocode   :
+   input = gross salary, worked hour, bonus rate and income tax rate.
+ 
+   output = net salary
+   
+      process   
+   
+   income tax  = gross salary * income tax rate
+       
+pension = gross salary * 0.07
+
+check whether worked hour > 40.
+
+ if worked hour > 40 then over time payment = (worked_hours-40)*bonus rate
+           
+if it doesn't over time payment = 0;
+        
+net_salary =  (gross_salary -(income_tax + pension) ) + over_time_payment
+
+  
+     Pseudocode   :
 
 Step 1.Start
 
