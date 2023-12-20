@@ -1,37 +1,34 @@
 #include <iostream>
 #include <cmath>
-#include <vector>
-
 using namespace std;
-
 int main() {
     int n;
-    float num, sum = 0, ave, SD, VR =0;
-
-    vector<float> numbers;
-
-    cout << "How many numbers do you want to work with: ";
+    int total = 0;
+    float mean = 0, variance = 0, standardDeviation = 0, sum = 0, sumOfSquares = 0;
+            
+    cout << "How many data entries will you? n: ";
     cin >> n;
 
-    for (int i = 1; i <= n; i++) 
-    {
-        cout << "Enter a number: ";
-        cin >> num;
-        numbers.push_back(num);
-        sum += num;
-    }
-    ave = sum / n;
-    for (float num : numbers) {
-        VR += pow(num - ave, 2);
-    }
-    SD = sqrt(VR / n);
-    cout << "The entered numbers: ";
-    for (float num : numbers) {
-        cout << num << " ";
+    for (int i = 0; i < n; i++) {
+        int mark, frequency;
+        
+        cout << "Enter the data: ";
+        cin >> mark;
+
+        cout << "Enter the data frequency: ";
+        cin >> frequency;
+
+        sum += mark * frequency;
+        sumOfSquares += frequency*pow(mark - mean, 2);
+        total += frequency;
     }
 
-    cout << "\nThe mean for the entered numbers is: " << ave << "\n";
-    cout << "The standard deviation is: " << SD;
+    mean = sum / total;
+    variance = sumOfSquares / total;
+    standardDeviation = sqrt(variance);
+   
+    cout << "The mean is: " << mean << endl;
+    cout << "The Variance is: " << variance << endl;
+    cout << "The Standard Deviation is: " << standardDeviation << endl;
 
     return 0;
-}
