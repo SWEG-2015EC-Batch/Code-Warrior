@@ -11,7 +11,7 @@ int main() {
 
     for (char ch : input) {
         if (isalpha(ch)) {
-            char lowerCh = tolower(ch); // Convert to lowercase for case-insensitive check
+            char lowerCh = tolower(ch);
             if (lowerCh == 'a' || lowerCh == 'e' || lowerCh == 'i' || lowerCh == 'o' || lowerCh == 'u') {
                 ++vowels;
             } else {
