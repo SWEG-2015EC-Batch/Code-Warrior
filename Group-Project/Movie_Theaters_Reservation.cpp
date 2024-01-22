@@ -24,8 +24,9 @@ int main() {
     cout << "\n\t\t\t      AASTU CINEMA Movie center Registration page\n\n";
     cout << "\t\t\t                           MENU\n\n";
 
-    while (true) {
+        while (true) {
         int choice1;
+        cout<<"\n\n\t__________________________________\n";//Modify here with this line to make more tabular form
         cout << "\t| Press 1 to LOGIN               |\n";
         cout << "\t| Press 2 to REGISTER            |\n";
         cout << "\t| Press 3 to FORGOT PASSWORD     |\n";
@@ -52,10 +53,12 @@ int main() {
                     }
 
                     if (found) {
-                        cout << "\nYou Login Successfully completed\n";
-                    } else {
-                        cout << "LOGIN Error!\nPlease, check your userId and password.\n";
+                        cout << "\n\t\tYou Login Successfully completed\n\n";
+                        break;
+                    }else {
+                        cout << "LOGIN Error!\nPlease, check your userId and password and enter again.\n\n";
                     }
+                    continue;
                 }
                 break;
 
@@ -85,31 +88,36 @@ int main() {
             case 3:
                 {
                     string username, securityWord;
+                    int age;
                     cout << "\t\t You forgot the Password? do not worries!\n";
                     cout << "\t\t Enter your username: ";
                     cin >> username;
+                    cout<<"\t\t Enter Your age: ";
+                    cin>>age;
 
                     bool found = false;
 
                     for (User& user : users) {
-                        if (user.username == username) {
+                        if (user.username == username && user.age == age) {
                             found = true;
-                            cout << "Security word: " << user.securityWord << endl;
-                            cout << "Enter Security Word: ";
+                            cout << "\t\t Your Security word: " << user.securityWord << endl;
+                            cout << "\t\t Enter Security Word: ";
                             cin >> securityWord; // Search for existing account by Security Word
                             if (securityWord == user.securityWord) {
                                 cout << "\n Your account is found!\n";
-                                cout << "Your Password: " << user.password << endl;
+                                cout << "Your Password: " << user.password <<"\n"<< endl;
+                                continue;
                             } else {
-                                cout << "Incorrect Security Word!\n";
+                                cout << "\nIncorrect Security Word! Please Enter the correct again.\n\n";
                             }
                             break;
                         }
                     }
 
                     if (!found) {
-                        cout << "\n\t Sorry! Your account is not found!\n";
+                        cout << "\n\t Sorry! Your account is not found! Please, Register again.\n";
                     }
+                    continue;
                 }
                 break;
 
