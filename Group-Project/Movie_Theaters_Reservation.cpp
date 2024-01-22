@@ -1,6 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <ctime>
+#include <iomanip>
+#include <cmath>
+    const int Col = 10;
 using namespace std;
 
 struct User {
@@ -26,12 +30,14 @@ int main() {
 
         while (true) {
         int choice1;
-        cout<<"\n\n\t__________________________________\n";//Modify here with this line to make more tabular form
+        //Modify here with this * to make more tabular form
+        cout<<"\n************************************************\n";
         cout << "\t| Press 1 to LOGIN               |\n";
         cout << "\t| Press 2 to REGISTER            |\n";
         cout << "\t| Press 3 to FORGOT PASSWORD     |\n";
-        cout << "\t| Press 4 to EXIT                |\n";
-        cout << "\n\t\t Please, select your choices: ";
+        cout << "\t| Press 4 to EXIT                |";
+        cout<<"\n************************************************\n";
+
         cin >> choice1;
         cout << endl;
 
@@ -130,6 +136,23 @@ int main() {
                 continue;
         }
         cout<<endl;
+
+        bool seats[3][Col] = { false };
+
+        cout<<"\nChoose your Will (Pleasure) from 1 or 2 other wise Exit the program.\n";
+        cout<<"=================================================================================\n";
+        cout << "\t1. VIP set with $149 price\n\t2. Standard set with $119 price\n\t3. Exit\n\n";
+        cout << "Enter your choice: ";
+        int choice;
+        cin >> choice;
+
+        string fullName;
+        float price, tax;
+        char row;
+        int genre, age, col, uniqueId;
+            
+            //Start here Switch case for the user choices
+            
     }
 
 return 0;
