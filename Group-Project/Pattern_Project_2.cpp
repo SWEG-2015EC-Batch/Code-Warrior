@@ -11,26 +11,27 @@ struct User {
 int main() {
     vector<User> users;
 
-    cout << "----------------------------------------------------------------------------------\n";
-    cout << "\t\t\t\t WELCOME TO AASTU \n";
-    cout << "----------------------------------------------------------------------------------\n";
-    cout << "----------------------------------------------------------------------------------\n";
-    cout << "\t\tADDIS ABABA SCIENSCES AND TECHNOLOGY UNIVERSITY\n";
-    cout << "\t\t\tUNIVERSITY FOR INDUSTRY\n";
-    cout << "\t\t   DEPARTMENET OF SOFTWARE ENGINEERING\n";
-    cout << "-------------------------------------------------------------------------------\n";
-    cout << "\t\t  This project Designed by CODE WORRIES Team\n";
-    cout << "________________________________________________________________________________\n";
+    cout << "\n|==================================================================================|\n";
+    cout << "|                       WELCOME TO AASTU PATTERN CENETER                            |\n";
+    cout << "|-----------------------------------------------------------------------------------|\n";
+    cout << "|-----------------------------------------------------------------------------------|\n";
+    cout << "|               ADDIS ABABA SCIENSCES AND TECHNOLOGY UNIVERSITY                     |\n";
+    cout << "|                           UNIVERSITY FOR INDUSTRY                                 |\n";
+    cout << "|                    DEPARTMENET OF SOFTWARE ENGINEERING                            |\n";
+    cout << "|-----------------------------------------------------------------------------------|\n";
+    cout << "|                This project Designed by CODE WORRIES Team                         |\n";
+    cout << "|___________________________________________________________________________________|\n";
     cout << "\n\t\t\t AASTU Program of PATTERN center of Registration page\n\n";
-    cout << "\t\t\t                       MENU";
+    cout << "\t\t\t     ************** MENU **************\n";
 
     while (true) {
         int choice1;
-        cout<<"\n\n\t=================================\n";
+        cout<<"\n************************************************\n";
         cout << "\t| Press 1 to LOGIN               |\n";
         cout << "\t| Press 2 to REGISTER            |\n";
         cout << "\t| Press 3 to FORGOT PASSWORD     |\n";
-        cout << "\t| Press 4 to EXIT                |\n";
+        cout << "\t| Press 4 to EXIT                |";
+        cout<<"\n************************************************\n";
         cout << "\n\t\t Please, select your choices: ";
         cin >> choice1;
         cout << endl;
@@ -39,24 +40,29 @@ int main() {
             case 1:
                 {
                     string username, password;
+                    for(int i=1; i<=3; i++){
                     cout << "\t\t Enter username: ";
                     cin >> username;
                     cout << "\t\t Enter Password: ";
                     cin >> password;
 
                     bool found = false;
-                    for (const User& user : users) {
-                        if (user.username == username && user.password == password) {
-                            found = true;
-                            break;
+                    //Check the User account registered before or Not
+                    
+                        for (const User& user : users) {
+                            if (user.username == username && user.password == password) {
+                               found = true;
+                               break;
+                            }
                         }
-                    }
-
-                    if (found) {
-                        cout << "\n\t\tYou Login Successfully completed\n\n";
-                        break;
-                    }else {
-                        cout << "LOGIN Error!\nPlease, check your userId and password and enter again.\n\n";
+                     
+                        if (found) {
+                           cout << "\n\t\tYou Login Successfully completed\n";
+                           break;
+                        }else {
+                           cout << "LOGIN Error!\nPlease, check your userId and password and enter again.\n\n";
+                        }
+                        cout<<"\t****You have only # "<<3-i<<" # try left****\n";
                     }
                     continue;
                 }
@@ -71,19 +77,25 @@ int main() {
 
                     cout << "\t\t Please, enter your age: ";
                     cin >> newUser.age;
-                    cout << "\n\n";
-                    cout << "\t\t Please, enter the username and password here to Register: " << endl;
-                    cout << "\t\t Enter Username: ";
-                    cin >> newUser.username;
-                    cout << "\t\t Enter Password: ";
-                    cin >> newUser.password;
-                    cout << "Enter the Security Word (Special Word) for Password recovery: ";
-                    cin >> newUser.securityWord;
+                    //Checke the User age level suitable to seat to moive what we prepare 
+                    if(newUser.age < 18){
+                        cout<<"\n=\tSorry! We have not prepared movies for under 18 child yet.\t\t=\n=\tWe will announce you when we update our Program prepare for you level.\t\t=\n=\tThankyou! for being your choice.\t\t=\n";
+                        continue;
+                    }else{
 
-                    users.push_back(newUser);
-                    cout << "\n\t\t Registration is Successful! \n";
+                        cout << "\n\t\t Please, enter the username and password here to Register: " << endl;
+                        cout << "\t\t Enter Username: ";
+                        cin >> newUser.username;
+                        cout << "\t\t Enter Strong Password like (code@15Worrie6): ";
+                        cin >> newUser.password;
+                        cout << "Enter the Security Word (Special Word) for Password recovery: ";
+                        cin >> newUser.securityWord;
+                    }
+
+                    users.push_back(newUser); //Stor the registration information into vector
+                    cout << "\n\t\t Registration is Successful!\n\tKnow You can LOGIN into the Page if you want by pressing 1. \n";
                 }
-                break;
+                continue; //Continue to Login page when the Registration done
 
             case 3:
                 {
@@ -91,9 +103,10 @@ int main() {
                     int age;
                     cout << "\t\t You forgot the Password? do not worries!\n";
                     cout << "\t\t Enter your username: ";
+                    //The program terminate if you enter the wrong User Name that dose not much with before you entered
                     cin >> username;
                     cout<<"\t\t Enter Your age: ";
-                    cin>>age;
+                    cin>>age;//The program terminate if you enter the wrong age that dose not much with before you entered
 
                     bool found = false;
 
@@ -102,7 +115,8 @@ int main() {
                             found = true;
                             cout << "\t\t Your Security word: " << user.securityWord << endl;
                             cout << "\t\t Enter Security Word: ";
-                            cin >> securityWord; // Search for existing account by Security Word
+                            cin >> securityWord; 
+                            // Search for existing account by Security Word
                             if (securityWord == user.securityWord) {
                                 cout << "\n Your account is found!\n";
                                 cout << "Your Password: " << user.password <<"\n"<< endl;
@@ -110,7 +124,7 @@ int main() {
                             } else {
                                 cout << "\nIncorrect Security Word! Please Enter the correct again.\n\n";
                             }
-                            break;
+                            break;//Go to the menu again
                         }
                     }
 
@@ -122,7 +136,9 @@ int main() {
                 break;
 
             case 4:
-                cout << "\t\t\t The Program Exit. Thank you! for using the Program.";
+                cout<<"====================================================================\n";
+                cout<<"=\t The Program Exit. Thank you! for using the Program.\t          =";
+                cout<<"\n===================================================================";
                 return 0;
 
             default:
