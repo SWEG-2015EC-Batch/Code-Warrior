@@ -146,6 +146,62 @@ int main() {
                 continue;
         }
         cout<<endl;
+        
+    int i, j, n;
+    string fullName;
+    cout<<"Enter here Your Full Name: ";
+    cin.ignore();
+    getline(cin, fullName);
+    
+    //Use for loop to form the Required PATTERN
+
+    int size;
+
+    cout<<"Make sure the input must be one digit number other wise the program will terminate.";
+    cout<<"\nEnter the Size of pattern 1 up to 9 : ";
+    cin>>size;
+
+    cout<<"\n------------------------------------------------------------------------\n";
+    //Print the full name of the user
+    
+    cout<<"\t\tCONGRATULATIONS!: ";
+    cout<<fullName<<endl;
+    //use if case the check validation
+    cout<<"\tYou have successfully form DIAMOND SHAPE PATTERN\n\n";
+ 
+    if(size < 10){
+        for(int row =0; row <= size; row++){
+
+        for(int i = 0; i <=size - row; i++){
+            cout<<row;
+        }
+            for(int j =1; j <= 2*row -1; j++){
+               cout<<" ";
+            }
+        for(int i= size-row; i>=0; i--){
+            cout<<row;
+        }
+        cout<<endl;
+
+        }
+
+        for(int row = size - 1; row>= 0; row--){
+        for(int i=0; i <= size-row; i++){
+            cout<<row;
+        }
+            for(int j =1; j <= 2*row-1; j++){
+               cout<<" ";
+            }
+        for(int i= size-row; i >=0; i--){
+            cout<<row;
+        }
+        
+        cout<<endl;
+        }
+        }else{
+            cout<<"Sorry! the program dose not sopport except one Digit.\nMake sure! the input value range 1 upto 10.";
+            return 0;
+        }
     }
 return 0;
 }
