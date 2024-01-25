@@ -167,8 +167,254 @@ int main() {
         int genre, age, col, uniqueId;
             
             //Start here Switch case for the user choices
+        
+        switch (choice) {
+            case 1:
+                // Display initial seating arrangement
+                cout << "  ";
+                for (int i = 1; i <= Col; i++) {
+                   cout << setw(4) << i;
+                }
+                cout << endl;
+
+               for (int i = 0; i < 3; i++) {
+                  cout << static_cast<char>('A' + i) << " ";
+
+                  for (int j = 0; j < Col; j++) {
+                     cout << setw(4) << (seats[i][j] ? "X" : "-");
+                  }
+                  cout <<endl;
+              }
+             // Check the validation of the user input entered
+                
+                cout<<"\nEnter here Your Full Name: ";
+                cin.ignore(); // Ignore the newline character in the input buffer
+                getline(cin, fullName);
+                cout << "Enter here Your Age: ";
+                cin >> age;
+
+                cout << "Enter Row (A-C): ";
+                cin >> row;
+                cout << "Enter Column (1-10): ";
+                cin >> col;
+
+                if (row < 'A' || row > 'C' || col < 1 || col > 10) {
+                    cout << "Enter valid Row or Column (capital letter from A - C and numbers from 1-10)\n";
+                    continue;
+                }
+
+                // Reservation logic
+                if (seats[row - 'A'][col - 1]) {
+                    cout << "\nSeat is already booked. Please choose a free seat from below:\n";
+                    continue;
+                } else {
+                    seats[row - 'A'][col - 1] = true;
+                    cout << "\nYou have booked the seat successfully" << std::endl;
+                }
+
+                cout << "Enter Your preferred genre: \n\t1. Comedy\n\t2. Tragedy\n\t3. Horror and Adventure\n\t4. Romance\n";
+                cout<<"Genre: ";
+                cin >> genre;
+
+                
+                cout<<"\nEnetr the amount of payment: $";
+                cin>>price;
+                if(price <= 149.9 ){
+                    cout<<"You entered balance is insufficent! please try again with enough amount of balance.\n";
+                    continue;
+                }else{
+                    cout<<"\t\t\nThankyou! Your Payment is successfully completed.\n";
+                    
+                }
+                tax = price*0.15; //Taxs for the legal service 15 % 
+
+                cout<<"\n\t=========================================";
+                cout << "\n\t\t **AASTU CINEMA CENTER**\n\n";
+                cout << "\t\t\tMOVIE TICKET\n";
+                cout << "\tUser Name: "<<fullName;
+                cout<<"\n\tUser Age: "<<age;
+
+                // Generate a random unique ID
+                srand(static_cast<unsigned int>(time(nullptr)));
+                uniqueId = rand() % 100 + 1;
+
+                cout << "\n\tUnique ID: #ACW" << col << row << uniqueId ;
+
+                switch (genre) {
+                    case 1:
+                        cout << "\n\tGenre: Comedy\n\tDay: Thursday at 7:00pm";
+                        break;
+                    case 2:
+                        cout << "\n\tGenre: Tragedy\n\tDay: Saturday at 9:00am";
+                        break;
+                    case 3:
+                        cout << "\n\tGenre: Horror and Adventure\n\tDay: Saturday at 3:00pm";
+                        break;
+                    case 4:
+                        cout << "\n\tGenre: Romance\n\tDay: Saturday at 8:00pm";
+                        break;
+                    default:
+                        cout << "\n\tYour choice is invalid. Please make sure to enter a valid choice from 1 to 4";
+                        continue;
+                }
+                
+                cout << "\n\tSet place is VIP Set: " << row << "#" << col <<endl;
+                cout<<"__________________________________________________________";
+                cout<<"\n\tYour Payment: $"<<price;
+                cout<<"\n\tTax rate: $"<<tax<<endl;
+                cout<<"__________________________________________________________";
+                cout << "\nIf you want additional information, please do not hesitate to contact us here.\n";
+                cout << "\n\tTele: +2519******12\n\tEmail: student@aastu.edue.et\n";
+                cout<<"===================================================================\n";
+
+                // Display updated seating arrangement
+                cout << "  ";
+                for (int i = 1; i <= Col; i++) {
+                    cout << setw(4) << i;
+                }
+                cout << endl;
+
+                for (int i = 0; i < 3; i++) {
+                    cout << static_cast<char>('A' + i) << " ";
+
+                    for (int j = 0; j < Col; j++) {
+                        cout << setw(4) << (seats[i][j] ? "X" : "-");
+                    }
+                    cout << endl;
+                }
             
+            break;
+        
+        case 2:
+
+            //seats[][Col] = seats[7][Col];
+            seats[7][Col] = {false};
+
+            // Display initial seating arrangement
+            cout << "  ";
+            for (int i = 1; i <= Col; i++) {
+                cout << setw(4) << i;
+            }
+            cout << endl;
+
+            for (int i = 0; i < 7; i++) {
+                cout << static_cast<char>('D' + i) << " ";
+
+                for (int j = 0; j < Col; j++) {
+                    cout << setw(4) << (seats[i][j] ? "X" : "-");
+                }
+                cout <<endl;
+            }
+                // Check the validation of the user input entered
+                
+                cout<<"\nEnter here Your Full Name: ";
+                cin.ignore(); // Ignore the newline character in the input buffer
+                getline(cin, fullName);
+                cout << "Enter here Your Age: ";
+                cin >> age;
+
+                cout << "Enter Row (D-J): ";
+                cin >> row;
+                cout << "Enter Column (1-10): ";
+                cin >> col;
+
+                if (row < 'D' || row > 'J' || col < 1 || col > 10) {
+                    cout << "Enter valid Row or Column (capital letter from D - J and numbers from 1-10)\n";
+                    continue;
+                }
+
+                // Reservation logic
+                if (seats[row - 'D'][col - 1]) {
+                    cout << "\nSeat is already booked. Please choose a free seat from below:\n";
+                    continue;
+                } else {
+                    seats[row - 'D'][col - 1] = true;
+                    cout << "\nYou have booked the seat successfully" << endl;
+                }
+
+                cout << "Enter Your preferred genre: \n1. Comedy\n2. Tragedy\n3. Horror and Adventure\n4. Romance\n";
+               
+                cout<<"Genre: ";
+                cin >> genre;
+
+                cout<<"\nEnetr the amount of payment: $";
+                cin>>price;
+                if(price <= 119 ){
+                    cout<<"You entered balance is insufficent! please try again with enough amount of balance.\n";
+                    continue;
+                }else{
+                    cout<<"\t\t\nThankyou! Your Payment is successfully completed.\n";
+                    
+                }
+                tax = price*0.15; //Taxs for the legal service 15 % 
+
+                cout<<"\n\t=========================================";
+                cout << "\n\t\t **AASTU CINEMA CENTER**\n\n";
+                cout << "\t\t\tMOVIE TICKET\n";
+                cout << "\tUser Name: "<<fullName;
+                cout<<"\n\tUser Age: "<<age;
+
+                // Generate a random unique ID
+                srand(static_cast<unsigned int>(time(nullptr)));
+                uniqueId = rand() % 100 + 1;
+
+                cout << "\n\tUnique ID: #ACW"  << col<< row << uniqueId<<"\n";
+
+                switch (genre) {
+                    case 1:
+                        cout << "\tGenre: Comedy\n\tDay: Thursday at 7:00pm";
+                        break;
+                    case 2:
+                        cout << "\n\tGenre: Tragedy\n\tDay: Saturday at 9:00am";
+                        break;
+                    case 3:
+                        cout << "\n\tGenre: Horror and Adventure\n\tDay: Saturday at 3:00pm";
+                        break;
+                    case 4:
+                        cout << "\n\tGenre: Romance\n\tDay: Saturday at 8:00pm";
+                        break;
+                    default:
+                        cout << "\n\tYour choice is invalid. Please make sure to enter a valid choice from 1 to 4";
+                        continue;
+                }
+                
+                cout << "\n\tSet place is VIP Set: " << row << "#" << col <<endl;
+                cout<<"________________________________________________________________";
+                cout<<"\n\tYour Payment: $"<<price;
+                cout<<"\n\tTax rate: $"<<tax<<endl;
+                cout<<"________________________________________________________________";
+                cout << "\nIf you want additional information, please do not hesitate to contact us here.\n";
+                cout << "\n\tTele: +2519******12\n\tEmail: student@aastu.edue.et\n";
+                cout<<"=========================================================================\n\n";
+
+                // Display updated seating arrangement
+                cout << "  ";
+                for (int i = 1; i <= Col; i++) {
+                    cout << setw(4) << i;
+                }
+                cout << endl;
+
+                for (int i = 0; i < 7; i++) {
+                    cout << static_cast<char>('D' + i) << " ";
+
+                    for (int j = 0; j < Col; j++) {
+                        cout << setw(4) << (seats[i][j] ? "X" : "-");
+                    }
+                    cout << endl;
+                }
+            
+            
+            break;
+        case 3:
+            cout<<"Thankyou! "<<"To use this program, We will in touch soon agian.";
+            break;
+    
+        default:
+            cout<<"Invalid input, Please Enter the correct choice from 1 and 2.\n";
+            break;
     }
+            
+    }//While loop
 
 return 0;
 }
