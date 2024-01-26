@@ -413,10 +413,10 @@ int main() {
                 cout<<"\n\t=========================================";
                 cout << "\n\t\t AASTU CINEMA CENTER\n\n";
                 cout << "\t\t\tMOVIE TICKET\n";
-                   for (const User& user : users) {
+                   
                 cout << "\tUser Name: "<<fullName;
                 cout<<"\n\tUser Age: "<<age;
-                   }
+                   
 
                 // Generate a random unique ID
                 srand(static_cast<unsigned int>(time(nullptr)));
