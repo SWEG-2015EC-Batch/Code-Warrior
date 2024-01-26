@@ -411,7 +411,7 @@ int main() {
                 tax = price*0.15; //Taxs for the legal service 15 % 
 
                 cout<<"\n\t=========================================";
-                cout << "\n\t\t **AASTU CINEMA CENTER**\n\n";
+                cout << "\n\t\t AASTU CINEMA CENTER\n\n";
                 cout << "\t\t\tMOVIE TICKET\n";
                    for (const User& user : users) {
                 cout << "\tUser Name: "<<fullName;
@@ -443,12 +443,12 @@ int main() {
                 }
                 
                 cout << "\n\tSeat place is Standard Seat: " << row << "#" << col <<endl;
-                cout<<"________________________________________________________________";
+                cout<<"________________";
                 cout<<"\n\tYour Payment: $"<<price;
                 cout<<"\n\tTax rate: $"<<tax<<endl;
-                cout<<"________________________________________________________________";
+                cout<<"________________";
                 cout << "\nIf you want additional information, please do not hesitate to contact us here.\n";
-                cout << "\n\tTele: +2519******12\n\tEmail: student@aastu.edue.et\n";
+                cout << "\n\tTele: +2519**12\n\tEmail: student@aastu.edue.et\n";
                 cout<<"=========================================================================\n\n";
 
                 break;
@@ -458,13 +458,13 @@ int main() {
                     cout << "Thank you! for using this program, We will be in touch soon again.";
                     return 0;
 
-                default:
+              default :
                     cout << "Invalid input, Please Enter the correct choice from 1, 2, or 3.\n";
                     break;
-            }
+                 }
 
            
-        }
+             }
     }
 
     return 0;
