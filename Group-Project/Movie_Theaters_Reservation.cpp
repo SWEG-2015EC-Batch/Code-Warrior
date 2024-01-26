@@ -1,10 +1,14 @@
+//FINAL PROJECT: Movie Theater Seat Reservation System
+//MADE BY: CODE WORRIERS
 #include <iostream>
-#include <vector>
 #include <string>
 #include <ctime>
 #include <iomanip>
 #include <cmath>
-    const int Col = 10;
+
+const int Col = 10;
+const int MaxUsers = 100;  // Maximum number of users or the capacity of the cinema.
+
 using namespace std;
 
 struct User {
@@ -13,9 +17,11 @@ struct User {
 };
 
 int main() {
-    vector<User> users;
- 
-    cout << "\n===================================================================================|\n";
+    User users[MaxUsers];  // Array of User structures
+    int userCount = 0;     // Variable to keep track of the number of users count i.e 30 for VIP and 70 for standard seats.
+
+    // a Welcome message
+    cout << "|===================================================================================|\n";
     cout << "|                       WELCOME TO AASTU CINEMA CENETER                             |\n";
     cout << "|-----------------------------------------------------------------------------------|\n";
     cout << "|-----------------------------------------------------------------------------------|\n";
@@ -23,172 +29,198 @@ int main() {
     cout << "|                            UNIVERSITY FOR INDUSTRY                                |\n";
     cout << "|                      DEPARTMENET OF SOFTWARE ENGINEERING                          |\n";
     cout << "|-----------------------------------------------------------------------------------|\n";
-    cout << "|                  This project Designed by CODE WORRIES Team                       |\n";
+    cout << "|-----------------------------------------------------------------------------------|\n";
+    cout << "|                  This project was designed by team : CODE WORRIES                 |\n";
     cout << "|___________________________________________________________________________________|\n";
-    cout << "\n\t\t    AASTU CINEMA Movie center Registration page\n\n";
-    cout << "\t\t\t   ******** MENU ********\n";
 
     while (true) {
         int choice1;
-        cout<<"\n************************************************\n";
-        cout << "\t| Press 1 to LOGIN               |\n";
-        cout << "\t| Press 2 to REGISTER            |\n";
-        cout << "\t| Press 3 to FORGOT PASSWORD     |\n";
-        cout << "\t| Press 4 to EXIT                |";
-        cout<<"\n************************************************\n";
+        // Main menu
+        cout << "\n\t\t    AASTU CINEMA Movie center Registration page\n\n";
+        cout << "\t\t\t        ** MENU **\n";
+
+        cout << "\n\t\t|****************************************|\n";
+        cout << "\t\t|\t Press 1 to LOGIN (SIGN IN)      |\n";
+        cout << "\t\t|\t Press 2 to REGISTER (SIGN UP)   |\n";
+        cout << "\t\t|\t Press 3 to EXIT                 |";
+        cout << "\n\t\t|****************************************|\n";
 
         cout << "\n\t\t Please, select your choices: ";
         cin >> choice1;
         cout << endl;
-        
+
         switch (choice1) {
-            case 1:
-                {
-                    string username, password;
-                    for(int i=1; i<=3; i++){
+            case 1: {
+                // Login page
+                string username, password, securityWord;
+                int age;
+
+                for (int i = 1; i <= 3; i++) {
                     cout << "\t\t Enter username: ";
                     cin >> username;
                     cout << "\t\t Enter Password: ";
                     cin >> password;
 
                     bool found = false;
-                    //Check the User account registered before or Not
-                    
-                        for (const User& user : users) {
-                            if (user.username == username && user.password == password) {
-                               found = true;
-                               break;
-                            }
-                        }
-                     
-                        if (found) {
-                           cout << "\n\t\tYou Login Successfully completed\n";
-                           break;
-                        }else {
-                           cout << "LOGIN Error!\nPlease, check your userId and password and enter again.\n\n";
-                        }
-                        cout<<"\t****You have only # "<<3-i<<" # try left****\n";
-                    }
-                    continue;
-                }
-                break;
 
-            case 2:
-                {
-                    User newUser;
-                    cout << "\t\t Please, enter your Full Name: ";
-                    cin.ignore(); // Added to ignore the newline character
-                    getline(cin, newUser.fullName); // Read full name including space
-
-                    cout << "\t\t Please, enter your age: ";
-                    cin >> newUser.age;
-                    //Checke the User age level suitable to seat to moive what we prepare 
-                    if(newUser.age < 18){
-                        cout<<"\n=\tSorry! We have not prepared movies for under 18 child yet.\t\t=\n=\tWe will announce you when we update our Program prepare for you level.\t\t=\n=\tThankyou! for being your choice.\t\t=\n";
-                        continue;
-                    }else{
-
-                        cout << "\n\t\t Please, enter the username and password here to Register: " << endl;
-                        cout << "\t\t Enter Username: ";
-                        cin >> newUser.username;
-                        cout << "\t\t Enter Strong Password like (code@15Worrie6): ";
-                        cin >> newUser.password;
-                        cout << "Enter the Security Word (Special Word) for Password recovery: ";
-                        cin >> newUser.securityWord;
-                    }
-
-                    users.push_back(newUser); //Stor the registration information into vector
-                    cout << "\n\t\t Registration is Successful!\n\tKnow You can LOGIN into the Page if you want by pressing 1. \n";
-                }
-                continue; //Continue to Login page when the Registration done
-
-            case 3:
-                {
-                    string username, securityWord;
-                    int age;
-                    cout << "\t\t You forgot the Password? do not worries!\n";
-                    cout << "\t\t Enter your username: ";
-                    //The program terminate if you enter the wrong User Name that dose not much with before you entered
-                    cin >> username;
-                    cout<<"\t\t Enter Your age: ";
-                    cin>>age;//The program terminate if you enter the wrong age that dose not much with before you entered
-
-                    bool found = false;
-
-                    for (User& user : users) {
-                        if (user.username == username && user.age == age) {
+                    for (int j = 0; j < userCount; j++) {
+                        if (users[j].username == username && users[j].password == password) {
                             found = true;
-                            cout << "\t\t Your Security word: " << user.securityWord << endl;
-                            cout << "\t\t Enter Security Word: ";
-                            cin >> securityWord; 
-                            // Search for existing account by Security Word
-                            if (securityWord == user.securityWord) {
-                                cout << "\n Your account is found!\n";
-                                cout << "Your Password: " << user.password <<"\n"<< endl;
-                                continue;
-                            } else {
-                                cout << "\nIncorrect Security Word! Please Enter the correct again.\n\n";
-                            }
-                            break;//Go to the menu again
+                            cout << "\n\t\tYou Login Successfully completed\n";
+                            break;
                         }
                     }
 
-                    if (!found) {
-                        cout << "\n\t Sorry! Your account is not found! Please, Register again.\n";
+                    if (found) {
+                        //if User logged in successfully
+                        break;
+                    } else {
+                        cout << "LOGIN Error!\nPlease, check your userId and password and enter again.\n\n";
+                        cout << "\t****You have only # " << 3 - i << " # try left****\n";
                     }
+
+                    // Check if it's the last attempt third attempt.
+                    if (i == 3) {
+                        cout << "You've reached the maximum number of login attempts.\n";
+                        cout << "Would you like to reset your password? (Y/N): ";
+                        char resetChoice;
+                        cin >> resetChoice;
+
+                        if (resetChoice == 'Y' || resetChoice == 'y') {
+                            cout << "\t\t Did you forget your password? Don't worry we got you.\n";
+                            cout << "\t\t Enter Your age: ";
+                            cin >> age;
+
+                            bool foundUser = false;
+
+                            for (int k = 0; k < userCount; k++) {
+                                if (users[k].username == username && users[k].age == age) {
+                                    foundUser = true;
+                                    cout << "\t\t Your Security word: " << users[k].securityWord << endl;
+                                    cout << "\t\t Enter Security Word: ";
+                                    cin >> securityWord;
+
+                                    if (securityWord == users[k].securityWord) {
+                                        cout << "\n Your account is found!\n";
+                                        cout << "Your Password: " << users[k].password << "\n" << endl;
+                                    } else {
+                                        cout << "\nIncorrect Security Word! Please Enter the correct again.\n\n";
+                                    }
+                                    break;
+                                }
+                            }
+
+                            if (!foundUser) {
+                                cout << "\n\t Sorry! Your account is not found! Please, Register again.\n";
+                            }
+                        }
+                    }
+                }
+
+                break;
+            }
+
+            case 2: {
+                // User registration
+                if (userCount >= MaxUsers) {
+                    cout << "Maximum number of users reached. Cannot register more users.\n";
                     continue;
                 }
-                break;
 
-            case 4:
-                cout<<"====================================================================\n";
-                cout<<"=\t The Program Exit. Thank you! for using the Program.\t          =";
-                cout<<"\n===================================================================";
+                User newUser;
+                cout << "\t\t Please, enter your Full Name: ";
+                cin.ignore(); // Added to ignore the newline character
+                getline(cin, newUser.fullName); // Read full name including space
+
+                cout << "\t\t Please, enter your age: ";
+                cin >> newUser.age;
+
+                if (newUser.age < 18) {
+                    cout << "\n=\tSorry! We have not prepared movies for under 18 child yet.\t\t=\n=\tWe will announce you when we update our Program prepare for you level.\t\t=\n=\tThank you! for being your choice.\t\t=\n";
+                    continue;
+                } else {
+                    cout << "\n\t\t Please, enter the username and password here to Register: " << endl;
+                    cout << "\t\t Enter Username: ";
+                    cin >> newUser.username;
+                    cout << "\t\t Enter Strong Password like (code@15Worrie6): ";
+                    cin >> newUser.password;
+                    cout << "Enter the Security Word (Special Word) for Password recovery: ";
+                    cin >> newUser.securityWord;
+                }
+
+                users[userCount++] = newUser;  // Add the new user to the array
+                cout << "\n\t\t Registration is Successful!\n\t \n";
+                break;
+            }
+
+            case 3: {
+                // Exit the program
+                cout << "====================================================================\n";
+                cout << "=\t The Program Exit. Thank you! for using the Program.\t          =";
+                cout << "\n===================================================================";
                 return 0;
+            }
 
             default:
                 cout << "\t\t Invalid choice. Please select from the options given.\n";
-                continue;
+                break;
         }
-        cout<<endl;
+        cout << endl;
 
-        bool seats[3][Col] = { false };
-
-        cout<<"\nChoose your Will (Pleasure) from 1 or 2 other wise Exit the program.\n";
-        cout<<"=================================================================================\n";
-        cout << "\t1. VIP set with $149 price\n\t2. Standard set with $119 price\n\t3. Exit\n\n";
-        cout << "Enter your choice: ";
-        int choice;
-        cin >> choice;
-
-        string fullName;
-        float price, tax;
-        char row;
-        int genre, age, col, uniqueId;
-            
-            //Start here Switch case for the user choices
+       
+        bool vipSeats[3][Col] = {{false}};      // Array to represent VIP seating arrangement
+        bool standardSeats[7][Col] = {{false}}; // Array to represent Standard seating arrangement
         
-        switch (choice) {
-            case 1:
-                // Display initial seating arrangement
+    
+
+        while (true) {
+            cout << "=================================================================================\n";
+            cout << "\t1. VIP set with $149 \n\t2. Standard set with $119 \n\t3. Exit\n\n";
+            cout << "Enter your choice: ";
+            int choice;
+            cin >> choice;
+
+            string fullName;
+            float price, tax;
+            char row;
+            int genre, age, col, uniqueId;
+
+            switch (choice) {
+                case 1:{
+                // Display initial VIP seating arrangement all the 30 seats with their update
                 cout << "  ";
                 for (int i = 1; i <= Col; i++) {
-                   cout << setw(4) << i;
+                    cout << setw(4) << i;
                 }
                 cout << endl;
 
-               for (int i = 0; i < 3; i++) {
-                  cout << static_cast<char>('A' + i) << " ";
+                for (int i = 0; i < 3; i++) {
+                    cout << static_cast<char>('A' + i) << " ";
 
-                  for (int j = 0; j < Col; j++) {
-                     cout << setw(4) << (seats[i][j] ? "X" : "-");
-                  }
-                  cout <<endl;
-              }
-             // Check the validation of the user input entered
-                
-                cout<<"\nEnter here Your Full Name: ";
-                cin.ignore(); // Ignore the newline character in the input buffer
+                    for (int j = 0; j < Col; j++) {
+                        cout << setw(4) << (vipSeats[i][j] ? "X" : "-");
+                    }
+                    cout << endl;
+                }
+
+                // Check if VIP seats are full
+                int vipBookedCount = 0;
+                for (int i = 0; i < 3; i++) {
+                    for (int j = 0; j < Col; j++) {
+                        if (vipSeats[i][j]) {
+                            vipBookedCount++;
+                        }
+                    }
+                }
+
+                if (vipBookedCount >= 30) {
+                    cout << "Sorry, VIP seats are full. Please choose Standard seats.\n";
+                    continue;
+                }
+
+                // Continue with reservation logic for VIP seats
+                cout << "\nEnter here Your Full Name: ";
+                cin.ignore();  // Ignore the newline character in the input buffer
                 getline(cin, fullName);
                 cout << "Enter here Your Age: ";
                 cin >> age;
@@ -203,16 +235,31 @@ int main() {
                     continue;
                 }
 
-                // Reservation logic
-                if (seats[row - 'A'][col - 1]) {
+                // Reservation logic for VIP seats this logic work through and identify if there are any similar seats and information immediately.
+                if (vipSeats[row - 'A'][col - 1]) {
                     cout << "\nSeat is already booked. Please choose a free seat from below:\n";
                     continue;
                 } else {
-                    seats[row - 'A'][col - 1] = true;
-                    cout << "\nYou have booked the seat successfully" << std::endl;
+                    vipSeats[row - 'A'][col - 1] = true;
+                    cout << "\nYou have booked the VIP seat successfully" << endl;
                 }
 
-                cout << "Enter Your preferred genre: \n\t1. Comedy\n\t2. Tragedy\n\t3. Horror and Adventure\n\t4. Romance\n";
+                // Display updated VIP seating arrangement with avaliable seats.
+                cout << "  ";
+                for (int i = 1; i <= Col; i++) {
+                    cout << setw(4) << i;
+                }
+                cout << endl;
+
+                for (int i = 0; i < 3; i++) {
+                    cout << static_cast<char>('A' + i) << " ";
+
+                    for (int j = 0; j < Col; j++) {
+                        cout << setw(4) << (vipSeats[i][j] ? "X" : "-");
+                    }
+                    cout << endl;
+                }
+                                cout << "Enter Your preferred genre: \n\t1. Comedy\n\t2. Tragedy\n\t3. Horror and Adventure\n\t4. Romance\n";
                 cout<<"Genre: ";
                 cin >> genre;
 
@@ -226,13 +273,15 @@ int main() {
                     cout<<"\t\t\nThankyou! Your Payment is successfully completed.\n";
                     
                 }
-                tax = price*0.15; //Taxs for the legal service 15 % 
+                tax = price*0.15; //Taxs for the legal service 15 % if any you know 
 
                 cout<<"\n\t=========================================";
                 cout << "\n\t\t **AASTU CINEMA CENTER**\n\n";
                 cout << "\t\t\tMOVIE TICKET\n";
+                   
                 cout << "\tUser Name: "<<fullName;
                 cout<<"\n\tUser Age: "<<age;
+                   
 
                 // Generate a random unique ID
                 srand(static_cast<unsigned int>(time(nullptr)));
@@ -258,7 +307,7 @@ int main() {
                         continue;
                 }
                 
-                cout << "\n\tSet place is VIP Set: " << row << "#" << col <<endl;
+                cout << "\n\tSeat place is VIP Seat: " << row << "#" << col <<endl;
                 cout<<"__________________________________________________________";
                 cout<<"\n\tYour Payment: $"<<price;
                 cout<<"\n\tTax rate: $"<<tax<<endl;
@@ -267,48 +316,44 @@ int main() {
                 cout << "\n\tTele: +2519******12\n\tEmail: student@aastu.edue.et\n";
                 cout<<"===================================================================\n";
 
-                // Display updated seating arrangement
+                break;
+                }
+
+                case 2:{
+                // Display initial Standard seating arrangement
                 cout << "  ";
                 for (int i = 1; i <= Col; i++) {
                     cout << setw(4) << i;
                 }
                 cout << endl;
 
-                for (int i = 0; i < 3; i++) {
-                    cout << static_cast<char>('A' + i) << " ";
+                for (int i = 0; i < 7; i++) {
+                    cout << static_cast<char>('D' + i) << " ";
 
                     for (int j = 0; j < Col; j++) {
-                        cout << setw(4) << (seats[i][j] ? "X" : "-");
+                        cout << setw(4) << (standardSeats[i][j] ? "X" : "-");
                     }
                     cout << endl;
                 }
-            
-            break;
-        
-        case 2:
 
-            //seats[][Col] = seats[7][Col];
-            seats[7][Col] = {false};
-
-            // Display initial seating arrangement
-            cout << "  ";
-            for (int i = 1; i <= Col; i++) {
-                cout << setw(4) << i;
-            }
-            cout << endl;
-
-            for (int i = 0; i < 7; i++) {
-                cout << static_cast<char>('D' + i) << " ";
-
-                for (int j = 0; j < Col; j++) {
-                    cout << setw(4) << (seats[i][j] ? "X" : "-");
+                // Check if Standard seats are full
+                int standardBookedCount = 0;
+                for (int i = 0; i < 7; i++) {
+                    for (int j = 0; j < Col; j++) {
+                        if (standardSeats[i][j]) {
+                            standardBookedCount++;
+                        }
+                    }
                 }
-                cout <<endl;
-            }
-                // Check the validation of the user input entered
-                
-                cout<<"\nEnter here Your Full Name: ";
-                cin.ignore(); // Ignore the newline character in the input buffer
+
+                if (standardBookedCount >= 70) {
+                    cout << "Sorry, Standard seats are full. Please choose VIP seats.\n";
+                    continue;
+                }
+
+                // Continue with reservation logic for Standard seats
+                cout << "\nEnter here Your Full Name: ";
+                cin.ignore();  // Ignore the newline character in the input buffer
                 getline(cin, fullName);
                 cout << "Enter here Your Age: ";
                 cin >> age;
@@ -323,15 +368,32 @@ int main() {
                     continue;
                 }
 
-                // Reservation logic
-                if (seats[row - 'D'][col - 1]) {
+                // Reservation logic for Standard seats
+                if (standardSeats[row - 'D'][col - 1]) {
                     cout << "\nSeat is already booked. Please choose a free seat from below:\n";
                     continue;
                 } else {
-                    seats[row - 'D'][col - 1] = true;
-                    cout << "\nYou have booked the seat successfully" << endl;
+                    standardSeats[row - 'D'][col - 1] = true;
+                    cout << "\nYou have booked the Standard seat successfully" << endl;
                 }
 
+                // Display updated Standard seating arrangement
+                cout << "  ";
+                for (int i = 1; i <= Col; i++) {
+                    cout << setw(4) << i;
+                }
+                cout << endl;
+
+                for (int i = 0; i < 7; i++) {
+                    cout << static_cast<char>('D' + i) << " ";
+
+                    for (int j = 0; j < Col; j++) {
+                        cout << setw(4) << (standardSeats[i][j] ? "X" : "-");
+                    }
+                    cout << endl;
+                }
+                
+                
                 cout << "Enter Your preferred genre: \n1. Comedy\n2. Tragedy\n3. Horror and Adventure\n4. Romance\n";
                
                 cout<<"Genre: ";
@@ -351,8 +413,10 @@ int main() {
                 cout<<"\n\t=========================================";
                 cout << "\n\t\t **AASTU CINEMA CENTER**\n\n";
                 cout << "\t\t\tMOVIE TICKET\n";
+                   for (const User& user : users) {
                 cout << "\tUser Name: "<<fullName;
                 cout<<"\n\tUser Age: "<<age;
+                   }
 
                 // Generate a random unique ID
                 srand(static_cast<unsigned int>(time(nullptr)));
@@ -378,7 +442,7 @@ int main() {
                         continue;
                 }
                 
-                cout << "\n\tSet place is VIP Set: " << row << "#" << col <<endl;
+                cout << "\n\tSeat place is Standard Seat: " << row << "#" << col <<endl;
                 cout<<"________________________________________________________________";
                 cout<<"\n\tYour Payment: $"<<price;
                 cout<<"\n\tTax rate: $"<<tax<<endl;
@@ -387,34 +451,21 @@ int main() {
                 cout << "\n\tTele: +2519******12\n\tEmail: student@aastu.edue.et\n";
                 cout<<"=========================================================================\n\n";
 
-                // Display updated seating arrangement
-                cout << "  ";
-                for (int i = 1; i <= Col; i++) {
-                    cout << setw(4) << i;
+                break;
                 }
-                cout << endl;
 
-                for (int i = 0; i < 7; i++) {
-                    cout << static_cast<char>('D' + i) << " ";
+                case 3:
+                    cout << "Thank you! for using this program, We will be in touch soon again.";
+                    return 0;
 
-                    for (int j = 0; j < Col; j++) {
-                        cout << setw(4) << (seats[i][j] ? "X" : "-");
-                    }
-                    cout << endl;
-                }
-            
-            
-            break;
-        case 3:
-            cout<<"Thankyou! "<<"To use this program, We will in touch soon agian.";
-            break;
-    
-        default:
-            cout<<"Invalid input, Please Enter the correct choice from 1 and 2.\n";
-            break;
+                default:
+                    cout << "Invalid input, Please Enter the correct choice from 1, 2, or 3.\n";
+                    break;
+            }
+
+           
+        }
     }
-            
-    }//While loop
 
-return 0;
+    return 0;
 }
