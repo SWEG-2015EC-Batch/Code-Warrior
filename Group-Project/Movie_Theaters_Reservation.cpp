@@ -2,14 +2,12 @@
 //MADE BY: CODE WARRIORS 
 #include <iostream>
 #include <string>
-#include <ctime>
 #include <iomanip>
-#include <cmath>
+
+using namespace std;
 
 const int Col = 10;
 const int MaxUsers = 100; // Maximum number of users or the capacity of the cinema.
-
-using namespace std;
 
 struct User
 {
@@ -38,10 +36,14 @@ int main()
     while (true)
     {
         int choice1;
-        // Main menu
 
         do
         {
+            
+                  
+  while(true)
+            {
+                // Main menu
             cout << "\n\t\t    AASTU CINEMA Movie center Registration page\n\n";
             cout << "\t\t\t        ** MENU **\n";
 
@@ -50,10 +52,26 @@ int main()
             cout << "\t\t|\t Press 2 to REGISTER (SIGN UP)   |\n";
             cout << "\t\t|\t Press 3 to EXIT                 |";
             cout << "\n\t\t|****************************************|\n";
-
+      
             cout << "\n\t\t Please, select your choices: ";
+            
+          
             cin >> choice1;
             cout << endl;
+            
+            if (cin.fail())  //if the input is non numerical this will clear the input and ask the user to enter a numerical value
+                {
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    cout << "Invalid input. Please enter a numerical value." << endl;
+                }
+                else
+                {
+                    // Valid input, break out of the loop
+                    break;
+                }
+            }
+            
             if (choice1 != 1 && choice1 != 2 && choice1 != 3)
             {
                 cout << "make sure to enter among 1,2 or 3.";
@@ -110,59 +128,42 @@ int main()
                     if (resetChoice == 'Y' || resetChoice == 'y')
                     {
                         cout << "\t\t Did you forget your password? Don't worry we got you.\n";
-                        while (true)
+              while (true)
                         {
-                            cout << "\t\t Please, enter your age: ";
-                            cin >> age;
+                            cout << "\t\t Enter Security Word: ";
+                            cin >> securityWord;
+                           bool foundUser = false;
 
-                            if (cin.fail())
+                            for (int k = 0; k < userCount; k++)
                             {
-                                cin.clear();
-                                cin.ignore(numeric_limits<streamsize>::max(), '\n');
-                                cout << "Invalid input. Please enter a number." << endl;
-                            }
-                            else
-                            {
-                                // Valid input, break out of the loop
-                                break;
-                            }
-                        }
-
-                        bool foundUser = false;
-
-                        for (int k = 0; k < userCount; k++)
-                        {
-                            if (users[k].username == username && users[k].age == age)
-                            {
-                                foundUser = true;
-                                cout << "\t\t Your Security word: " << users[k].securityWord << endl;
-                                cout << "\t\t Enter Security Word: ";
-                                cin >> securityWord;
-
-                                if (securityWord == users[k].securityWord)
+                                if (users[k].username == username && users[k].securityWord == securityWord)
                                 {
-                                    cout << "\n Your account is found!\n";
-                                    cout << "Your Password: " << users[k].password << "\n"
-                                         << endl;
+                                    foundUser = true;
+                                    cout << "\t\t Your Security word: " << users[k].securityWord << endl;
+                                    cout << "\t\t Enter new Password: ";
+                                    cin >> users[k].password;
+                                    cout << "\n\t\t Your Password has been reset successfully!\n";
+                                    break;
                                 }
-                                else
-                                {
-                                    cout << "\nIncorrect Security Word! Please Enter the correct again.\n\n";
-                                }
-                                break;
+                            }
+
+                            if (!foundUser)
+                            {
+                                cout << "\n\t Sorry! Your account is not found!\n";
+                                
+                                return 0;
                             }
                         }
-
-                        if (!foundUser)
-                        {
-                            cout << "\n\t Sorry! Your account is not found! Please, Register again.\n";
-                        }
+                    }else{
+                        cout << "\n\t You entered No, Sorry! Your account is not found!\n";
+                                
+                                return 0;
                     }
                 }
             }
-
+          }
             break;
-        }
+        
 
         case 2:
         {
@@ -411,7 +412,7 @@ int main()
                 cout << "\n\tTele: +2519******12\n\tEmail: student@aastu.edue.et\n";
                 cout << "===================================================================\n";
 
-                break;
+             break;
             }
 
             case 2:
@@ -539,11 +540,10 @@ int main()
                 cout << "\n\t=========================================";
                 cout << "\n\t\t AASTU CINEMA CENTER\n\n";
                 cout << "\t\t\tMOVIE TICKET\n";
-                for (const User &user : users)
-                {
+                
                     cout << "\tUser Name: " << fullName;
                     cout << "\n\tUser Age: " << age;
-                }
+                
 
                 // Generate a random unique ID
                 cout << "\n\tUnique ID: #AC_" << col << "_" << row << "/" << age;
