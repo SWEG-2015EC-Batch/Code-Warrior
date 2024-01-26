@@ -1,26 +1,23 @@
-// FINAL PROJECT: Movie Theater Seat Reservation System
+// FINAL PROJECT: printing pattern(Diamond)
 // MADE BY: CODE WARRIORS
 #include <iostream>
-#include <vector>
 #include <string>
 using namespace std;
 
 int main()
 {
 
-    cout << "\n|==================================================================================|\n";
-    cout << "|                       WELCOME TO AASTU PATTERN CENETER                            |\n";
+    cout << "\n|===================================================================================|\n";
+    cout << "|       WELCOME TO AASTU PRINTING A HOLLO DIAMOND SHAPED PATTERN CENETER            |\n";
     cout << "|-----------------------------------------------------------------------------------|\n";
     cout << "|-----------------------------------------------------------------------------------|\n";
     cout << "|               ADDIS ABABA SCIENSCES AND TECHNOLOGY UNIVERSITY                     |\n";
     cout << "|                           UNIVERSITY FOR INDUSTRY                                 |\n";
     cout << "|                    DEPARTMENET OF SOFTWARE ENGINEERING                            |\n";
     cout << "|-----------------------------------------------------------------------------------|\n";
-    cout << "|                This project Designed by CODE WORRIES Team                         |\n";
+     cout << "|                  This project was designed by team : CODE WORRIES                 |\n";
     cout << "|___________________________________________________________________________________|\n";
-    cout << "\n\t\t\t AASTU Program of PATTERN center of Registration page\n\n";
-    cout << "\t\t\t     ************** MENU **************\n";
-
+  
     int i, j, n;
     
 
@@ -28,16 +25,12 @@ int main()
 
     int size;
 
-    cout << "Make sure the input must be one digit number other wise the program will terminate.";
-    cout << "\nEnter the Size of pattern 1 up to 9 : ";
+ 
+    cout << "\nEnter the Size of pattern 1 up to 9 :";    
     cin >> size;
 
     cout << "\n------------------------------------------------------------------------\n";
-    // Print the full name of the user
-
-   
-    // use if case the check validation
-    cout << "\tYou have successfully form DIAMOND SHAPE PATTERN\n\n";
+    
 
     if (size < 10)
     {
@@ -89,6 +82,8 @@ int main()
 
             cout << endl;
         }
+        
+    cout << "\tYou have successfully form A HOLLO DIAMOND SHAPE PATTERN\n\n";
     }
     else
     {
