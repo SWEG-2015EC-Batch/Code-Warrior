@@ -202,6 +202,6 @@ int main() {
             cout<<"Sorry! the program dose not sopport except one Digit.\nMake sure! the input value range 1 upto 10.";
             return 0;
         }
-    }
+  }
 return 0;
 }
