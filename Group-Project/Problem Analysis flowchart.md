@@ -91,8 +91,8 @@ PSEUDOCODE
 
 3. MovieReservation():
     a. while True:
-        i. DisplaySeatOptions()
-        ii. Input seatChoice
+        i.DisplaySeatOptions()
+        ii.Input seatChoice
 
         iii. switch seatChoice:
             case 1:
