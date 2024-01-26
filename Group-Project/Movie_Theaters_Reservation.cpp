@@ -1,5 +1,5 @@
 //FINAL PROJECT: Movie Theater Seat Reservation System
-//MADE BY: CODE WORRIERS
+//MADE BY: CODE WARRIORS 
 #include <iostream>
 #include <string>
 #include <ctime>
