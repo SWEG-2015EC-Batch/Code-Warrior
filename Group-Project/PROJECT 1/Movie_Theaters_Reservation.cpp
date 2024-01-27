@@ -1,5 +1,5 @@
 //FINAL PROJECT: Movie Theater Seat Reservation System
-//MADE BY: CODE WARRIORS 
+//MADE BY: CODE WARRIORS
 #include <iostream>
 #include <string>
 #include <iomanip> // provides functionality for manipulating input/output operations, such as formatting output.
@@ -40,8 +40,8 @@ int main()
 
         do
         {
-            
-                  
+
+
   while(true)
             {
                 // Main menu
@@ -53,13 +53,13 @@ int main()
             cout << "\t\t|\t Press 2 to REGISTER (SIGN UP)   |\n";
             cout << "\t\t|\t Press 3 to EXIT                 |";
             cout << "\n\t\t|****************************************|\n";
-      
+
             cout << "\n\t\t Please, select your choices: ";
-            
-          
+
+
             cin >> choice1;
             cout << endl;
-            
+
             if (cin.fail())  //if the input is non numerical this will clear the input and ask the user to enter a numerical value
                 {
                     cin.clear();
@@ -72,7 +72,7 @@ int main()
                     break;
                 }
             }
-            
+
             if (choice1 != 1 && choice1 != 2 && choice1 != 3)
             {
                 cout << "make sure to enter among 1,2 or 3.";
@@ -93,7 +93,9 @@ int main()
                 cout << "\t\t Enter username: ";
                 cin >> username;
                 cout << "\t\t Enter Password: ";
-                cin >> password;
+                cin.ignore();
+                getline(cin,password );
+
 
                 bool found = false;
 
@@ -151,20 +153,20 @@ int main()
                             if (!foundUser)
                             {
                                 cout << "\n\t Sorry! Your account is not found!\n";
-                                
+
                                 return 0;
                             }
                         }
                     }else{
                         cout << "\n\t You entered No, Sorry! Your account is not found!\n";
-                                
+
                                 return 0;
                     }
                 }
             }
           }
             break;
-        
+
 
         case 2:
         {
@@ -212,9 +214,13 @@ int main()
                 cout << "\t\t Enter Username: ";
                 cin >> newUser.username;
                 cout << "\t\t Enter Strong Password like (code@15Worrie6): ";
-                cin >> newUser.password;
+                cin.ignore(); // Ignore the newline character in the input buffer
+                getline(cin, newUser.password);
+
                 cout << "Enter the Security Word (Special Word) for Password recovery: ";
-                cin >> newUser.securityWord;
+                cin.ignore(); // Ignore the newline character in the input buffer
+                getline(cin, newUser.securityWord);
+
             }
 
             users[userCount++] = newUser; // Add the new user to the array
@@ -239,14 +245,45 @@ int main()
 
         bool vipSeats[3][Col] = {{false}};      // Array to represent VIP seating arrangement
         bool standardSeats[7][Col] = {{false}}; // Array to represent Standard seating arrangement
-
+ int choice;
         while (true)
         {
-            cout << "=================================================================================\n";
+
+            do
+        {
+
+
+  while(true)
+            {
+                // Main menu
+                    cout << "=================================================================================\n";
             cout << "\t1. VIP set with $149 \n\t2. Standard set with $119 \n\t3. Exit\n\n";
             cout << "Enter your choice: ";
-            int choice;
+
             cin >> choice;
+
+            if (cin.fail())  //if the input is non numerical this will clear the input and ask the user to enter a numerical value
+                {
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    cout << "Invalid input. Please enter a numerical value." << endl;
+                }
+                else
+                {
+                    // Valid input, break out of the loop
+                    break;
+                }
+            }
+
+            if (choice != 1 && choice != 2 && choice != 3)
+            {
+                cout << "make sure to enter among 1,2 or 3.";
+            }
+
+        } while (choice != 1 && choice != 2 && choice != 3);
+
+
+
 
             string fullName;
             float price, tax;
@@ -374,7 +411,7 @@ int main()
                 }
                 tax = price * 0.15; // Taxs for the legal service 15 % if any you know
 
-                cout << "\n===================================================";
+                cout << "\n\t=========================================";
                 cout << "\n\t\t **AASTU CINEMA CENTER**\n\n";
                 cout << "\t\t\tMOVIE TICKET\n";
 
@@ -538,13 +575,13 @@ int main()
                 }
                 tax = price * 0.15; // Taxs for the legal service 15 %
 
-                cout << "\n===================================================";
+                cout << "\n\t=========================================";
                 cout << "\n\t\t AASTU CINEMA CENTER\n\n";
                 cout << "\t\t\tMOVIE TICKET\n";
-                
+
                     cout << "\tUser Name: " << fullName;
                     cout << "\n\tUser Age: " << age;
-                
+
 
                 // Generate a random unique ID
                 cout << "\n\tUnique ID: #AC_" << col << "_" << row << "/" << age;
@@ -593,3 +630,4 @@ int main()
 
     return 0;
 }
+
