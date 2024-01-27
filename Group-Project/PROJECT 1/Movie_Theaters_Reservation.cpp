@@ -374,7 +374,7 @@ int main()
                 }
                 tax = price * 0.15; // Taxs for the legal service 15 % if any you know
 
-                cout << "\n\t=========================================";
+                cout << "\n===================================================";
                 cout << "\n\t\t **AASTU CINEMA CENTER**\n\n";
                 cout << "\t\t\tMOVIE TICKET\n";
 
@@ -538,7 +538,7 @@ int main()
                 }
                 tax = price * 0.15; // Taxs for the legal service 15 %
 
-                cout << "\n\t=========================================";
+                cout << "\n===================================================";
                 cout << "\n\t\t AASTU CINEMA CENTER\n\n";
                 cout << "\t\t\tMOVIE TICKET\n";
                 
