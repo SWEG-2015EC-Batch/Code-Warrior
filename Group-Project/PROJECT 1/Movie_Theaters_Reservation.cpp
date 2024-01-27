@@ -2,7 +2,7 @@
 //MADE BY: CODE WARRIORS 
 #include <iostream>
 #include <string>
-#include <iomanip>
+#include <iomanip> // provides functionality for manipulating input/output operations, such as formatting output.
 #include <limits> // Include the <limits> header for numeric_limits
 
 using namespace std;
