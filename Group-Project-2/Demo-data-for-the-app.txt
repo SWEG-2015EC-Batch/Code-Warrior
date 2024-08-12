@@ -1,0 +1,20 @@
+P001,Onion,Fresh red onions from the farm,Addis Ababa,Express,100,2.50,10,Abebe,+251911234567,1000123456
+P002,Cabbage,Organic green cabbages,Bahir Dar,Standard,50,1.50,15,Dawit,+251912345678,1000987654
+P003,Injera,Ethiopian flatbread,Dire Dawa,Express,200,0.20,5,Mesfin,+251913456789,1001122334
+P004,Tomato,Ripe red tomatoes,Gondar,Standard,150,3.00,20,Hana,+251914567890,1002233445
+P005,Potato,Organic potatoes,Mekelle,Express,120,1.00,10,Tsegaye,+251915678901,1003344556
+P006,Teff,Teff grain for injera,Bahir Dar,Standard,100,6.00,12,Yonas,+251916789012,1004455667
+P007,Coffee,Freshly roasted coffee beans,Jimma,Express,90,8.00,8,Fikre,+251917890123,1005566778
+P008,Food Oil,High-quality cooking oil,Adama,Standard,130,5.50,10,Tadele,+251918901234,1006677889
+P009,Chicken,Free-range chickens,Hawassa,Express,110,12.00,15,Liya,+251919012345,1007788990
+P010,Egg,Organic eggs,Gondar,Standard,60,0.20,18,Sara,+251920123456,1008899001
+P011,Onion,Fresh red onions from the farm,Harar,Express,80,2.50,10,Mulu,+251921234567,1009900112
+P012,Cabbage,Organic green cabbages,Mekelle,Standard,140,1.50,12,Bereket,+251922345678,1000011223
+P013,Injera,Ethiopian flatbread,Addis Ababa,Express,200,0.20,5,Solomon,+251923456789,1001122334
+P014,Tomato,Ripe red tomatoes,Dire Dawa,Standard,150,3.00,5,Marta,+251924567890,1002233445
+P015,Potato,Organic potatoes,Jimma,Express,100,1.00,8,Kassa,+251925678901,1003344556
+P016,Teff,Teff grain for injera,Adama,Standard,200,6.00,10,Helina,+251926789012,1004455667
+P017,Coffee,Freshly roasted coffee beans,Hawassa,Express,120,8.00,15,Betty,+251927890123,1005566778
+P018,Food Oil,High-quality cooking oil,Harar,Standard,180,5.50,20,Getachew,+251928901234,1006677889
+P019,Chicken,Free-range chickens,Gondar,Express,90,12.00,12,Tesfaye,+251929012345,1007788990
+P020,Egg,Organic eggs,Addis Ababa,Standard,70,0.20,18,Mekonnen,+251930123456,1008899001
